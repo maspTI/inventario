@@ -17,6 +17,8 @@ class User extends Authenticatable
         'department_id','name','email','avatar','username','status',
     ];
 
+    protected $hidden = ['remember_token'];
+
     public function department()
     {
         return $this->belongsTo(Department::class);
@@ -30,5 +32,13 @@ class User extends Authenticatable
     public function devices()
     {
         return $this->hasMany(Device::class, 'holder_id');
+    }
+
+    public function search(array $filters = null)
+    {
+        if ($filters) {
+            return [];
+        }
+        return $this->whereNotNull('status')->get();
     }
 }

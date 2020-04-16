@@ -20,4 +20,12 @@ class Department extends Model
     {
         return $this->hasMany(Device::class);
     }
+
+    public function search(array $filters = null)
+    {
+        if ($filters) {
+            return [];
+        }
+        return $this->all();
+    }
 }

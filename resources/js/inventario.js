@@ -26,6 +26,12 @@ window.swal = require("sweetalert2");
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
+// Devices
+Vue.component(
+    "create-update-device-component",
+    require("./components/Devices/CreateUpdate.vue").default
+);
+
 // Utilities
 Vue.component("flash", require("./components/Utilities/Flash.vue").default);
 Vue.component(

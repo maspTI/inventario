@@ -24,7 +24,7 @@ class CreateDevicesTable extends Migration
             $table->string('ticket_number')->nullable();
             $table->date('bought_at')->nullable();
             $table->string('property_tag')->nullable();
-            $table->json('specifications');
+            $table->json('specifications')->nullable();
             $table->integer('status')->default(1);
             $table->timestamps();
             $table->softDeletes();

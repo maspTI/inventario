@@ -2,7 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
+use App\Brand;
 use App\Device;
+use App\Seller;
+use App\Pattern;
+use App\Category;
 use Illuminate\Http\Request;
 
 class DeviceController extends Controller
@@ -24,7 +29,19 @@ class DeviceController extends Controller
      */
     public function create()
     {
-        //
+        $categories = new Category;
+        $brands = new Brand;
+        $sellers = new Seller;
+        $users = new User;
+        $patterns = new Pattern;
+
+        return view('devices.create')->with([
+            'categories' => $categories->search(),
+            'brands' => $brands->search(),
+            'sellers' => $sellers->search(),
+            'users' => $users->search(),
+            'patterns' => $patterns->search()
+        ]);
     }
 
     /**

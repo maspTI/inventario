@@ -9,6 +9,16 @@
                     <p>Dashboard</p>
                 </a>
             </li>
+            <li class="nav-item {{ url()->current() == route('devices.index') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('devices.index') }}">
+                    <p>Dispositivos</p>
+                </a>
+            </li>
+            <li class="nav-item {{ url()->current() == route('devices.index') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('devices.index') }}">
+                    <p>Adicionar Dispositivos</p>
+                </a>
+            </li>
             <li class="nav-item {{ url()->current() == route('categories.index') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('categories.index') }}">
                     <p>Categorias</p>

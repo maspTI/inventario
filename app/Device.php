@@ -44,4 +44,12 @@ class Device extends Model
     {
         return $this->belongsTo(Department::class);
     }
+
+    public function search(array $filters = null)
+    {
+        if ($filters) {
+            return [];
+        }
+        return $this->all();
+    }
 }
