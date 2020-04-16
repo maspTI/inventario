@@ -6,8 +6,37 @@
         <ul class="nav">
             <li class="nav-item {{ url()->current() == route('dashboard.index') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('dashboard.index') }}">
-                    <i class="fas fa-tachometer-alt"></i>
                     <p>Dashboard</p>
+                </a>
+            </li>
+            <li class="nav-item {{ url()->current() == route('categories.index') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('categories.index') }}">
+                    <p>Categorias</p>
+                </a>
+            </li>
+            <li class="nav-item {{ url()->current() == route('categories.index') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('categories.index') }}">
+                    <p>Adicionar Categoria</p>
+                </a>
+            </li>
+            <li class="nav-item {{ url()->current() == route('brands.index') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('brands.index') }}">
+                    <p>Marcas</p>
+                </a>
+            </li>
+            <li class="nav-item {{ url()->current() == route('brands.index') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('brands.index') }}">
+                    <p>Adicionar Marca</p>
+                </a>
+            </li>
+            <li class="nav-item {{ url()->current() == route('patterns.index') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('patterns.index') }}">
+                    <p>Modelos</p>
+                </a>
+            </li>
+            <li class="nav-item {{ url()->current() == route('patterns.index') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('patterns.index') }}">
+                    <p>Adicionar Modelo</p>
                 </a>
             </li>
         </ul>

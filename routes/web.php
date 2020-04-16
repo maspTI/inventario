@@ -15,6 +15,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'DashboardController@index')->name('dashboard.index')->middleware(['auth']);
 
+// Categories Routes
+Route::resource('categories', 'CategoryController');
+
+// Brands Routes
+Route::resource('brands', 'BrandController');
+
+// Patterns Routes
+Route::resource('patterns', 'PatternController');
+
 // Auth::routes();
 Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
