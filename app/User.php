@@ -26,4 +26,9 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Role::class);
     }
+
+    public function devices()
+    {
+        return $this->hasMany(Device::class, 'holder_id');
+    }
 }

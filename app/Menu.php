@@ -2,7 +2,6 @@
 
 namespace App;
 
-use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
 class Menu extends Model
@@ -11,6 +10,6 @@ class Menu extends Model
 
     public function getMenus()
     {
-        return $this->where('status', '<=', Carbon::now())->orderBy('name')->get();
+        return $this->whereNotNull('status')->orderBy('name')->get();
     }
 }

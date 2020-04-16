@@ -25,7 +25,9 @@ class CreateDevicesTable extends Migration
             $table->date('bought_at')->nullable();
             $table->string('property_tag')->nullable();
             $table->json('specifications');
+            $table->integer('status')->default(1);
             $table->timestamps();
+            $table->softDeletes();
 
             $table->foreign('brand_id')->references('id')->on('brands');
             $table->foreign('seller_id')->references('id')->on('sellers');

@@ -15,7 +15,7 @@ class CreateSellersTable extends Migration
     {
         Schema::create('sellers', function (Blueprint $table) {
             $table->id();
-            $table->string('cnpj');
+            $table->string('cnpj')->unique();
             $table->string('name');
             $table->timestamps();
         });

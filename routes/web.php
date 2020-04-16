@@ -15,16 +15,21 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'DashboardController@index')->name('dashboard.index')->middleware(['auth']);
 
-// Categories Routes
-Route::resource('categories', 'CategoryController');
-
 // Brands Routes
-Route::resource('brands', 'BrandController');
+Route::resource('brands', 'BrandController')->middleware(['auth']);
+
+// Categories Routes
+Route::resource('categories', 'CategoryController')->middleware(['auth']);
+
+// Devices Routes
+Route::resource('devices', 'DeviceController')->middleware(['auth']);
 
 // Patterns Routes
-Route::resource('patterns', 'PatternController');
+Route::resource('patterns', 'PatternController')->middleware(['auth']);
 
-// Auth::routes();
+// Sellers Routes
+Route::resource('sellers', 'SellerController')->middleware(['auth']);
+
 Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('/login/{provider}', 'Auth\SocialLoginController@redirectToProvider')->name('socialite.provider');
