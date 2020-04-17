@@ -26,6 +26,12 @@ window.swal = require("sweetalert2");
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
+// Categories
+Vue.component(
+    "modal-create-category-component",
+    require("./components/Categories/CreateModal.vue").default
+);
+
 // Devices
 Vue.component(
     "create-update-device-component",

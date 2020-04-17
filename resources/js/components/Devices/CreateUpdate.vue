@@ -21,7 +21,12 @@
                         v-model="form.category"
                     />
                     <div class="input-group-append">
-                        <button class="btn btn-outline-success" type="button">
+                        <button
+                            class="btn btn-success"
+                            type="button"
+                            data-toggle="modal"
+                            data-target="#createCategoryModal"
+                        >
                             <i class="fas fa-plus"></i>
                         </button>
                     </div>
@@ -43,7 +48,7 @@
                         v-model="form.brands"
                     />
                     <div class="input-group-append">
-                        <button class="btn btn-outline-success" type="button">
+                        <button class="btn btn-success" type="button">
                             <i class="fas fa-plus"></i>
                         </button>
                     </div>
@@ -65,7 +70,7 @@
                         v-model="form.pattern"
                     />
                     <div class="input-group-append">
-                        <button class="btn btn-outline-success" type="button">
+                        <button class="btn btn-success" type="button">
                             <i class="fas fa-plus"></i>
                         </button>
                     </div>
@@ -88,7 +93,7 @@
                         v-model="form.seller"
                     />
                     <div class="input-group-append">
-                        <button class="btn btn-outline-success" type="button">
+                        <button class="btn btn-success" type="button">
                             <i class="fas fa-plus"></i>
                         </button>
                     </div>
@@ -113,6 +118,7 @@
                 <label>Data da Compra</label>
                 <date-picker
                     width="100%"
+                    format="DD/MM/YYYY"
                     v-model="form.bought_at"
                 ></date-picker>
             </div>
@@ -136,6 +142,9 @@
                     />
                 </div>
             </div>
+            <div class="col-md-12 mt-3">
+                <h4>Especificações</h4>
+            </div>
             <submit-button></submit-button>
         </div>
     </form>
@@ -143,13 +152,25 @@
 <script>
 import Form from "../../form-validation/Form";
 import Multiselect from "vue-multiselect";
+import "vue-multiselect/dist/vue-multiselect.min.css";
 import DatePicker from "vue2-datepicker";
 import "vue2-datepicker/index.css";
 export default {
     props: ["categories", "brands", "users", "patterns", "sellers"],
     data() {
         return {
-            form: new Form({}),
+            form: new Form({
+                brand: "",
+                seller: "",
+                holder: "",
+                pattern: "",
+                category: "",
+                ticket_number: "",
+                bought_at: "",
+                property_tag: "",
+                specifications: {},
+                status: "",
+            }),
         };
     },
     components: {
@@ -161,4 +182,3 @@ export default {
     },
 };
 </script>
-<style src="vue-multiselect/dist/vue-multiselect.min.css"></style>

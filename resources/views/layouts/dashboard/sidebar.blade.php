@@ -14,8 +14,8 @@
                     <p>Dispositivos</p>
                 </a>
             </li>
-            <li class="nav-item {{ url()->current() == route('devices.index') ? 'active' : '' }}">
-                <a class="nav-link" href="{{ route('devices.index') }}">
+            <li class="nav-item {{ url()->current() == route('devices.create') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('devices.create') }}">
                     <p>Adicionar Dispositivos</p>
                 </a>
             </li>

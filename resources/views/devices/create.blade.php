@@ -16,6 +16,7 @@
                     :brands="{{ $brands }}"
                     :patterns="{{ $patterns }}"
                     :sellers="{{ $sellers }}"></create-update-device-component>
+                <modal-create-category-component></modal-create-category-component>
             </div>
         </div>
     </div>
