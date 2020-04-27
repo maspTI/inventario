@@ -1,7 +1,7 @@
 <template>
     <div
         class="modal fade"
-        id="createCategoryModal"
+        id="createBrandModal"
         tabindex="-1"
         role="dialog"
         aria-labelledby="exampleModalLabel"
@@ -11,14 +11,14 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">
-                        Adicionar Categoria
+                        Adicionar Marca
                     </h5>
                     <button
                         type="button"
                         class="close"
                         data-dismiss="modal"
                         aria-label="Close"
-                        id="close-add-category"
+                        id="close-add-brand"
                     >
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -38,8 +38,8 @@
                                     <input
                                         type="text"
                                         class="form-control"
-                                        name="category-name"
-                                        id="category-name"
+                                        name="brand-name"
+                                        id="brand-name"
                                         v-model="form.name"
                                         required
                                         autofocus
@@ -74,12 +74,12 @@ export default {
             function() {
                 window.events.$emit("loading", true);
                 this.form
-                    .post("/categories")
+                    .post("/brands")
                     .then((result) => {
-                        window.flash("Categoria cadastrada com sucesso!");
+                        window.flash("Marca cadastrada com sucesso!");
                         window.events.$emit("loading", false);
-                        window.events.$emit("new_category", result);
-                        document.querySelector("#close-add-category").click();
+                        window.events.$emit("new_brand", result);
+                        document.querySelector("#close-add-brand").click();
                     })
                     .catch((errors) => {
                         window.flash("Algo deu errado.", "danger");

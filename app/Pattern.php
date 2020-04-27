@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Collection;
 
 class Pattern extends Model
 {
@@ -18,11 +19,11 @@ class Pattern extends Model
         return $this->hasMany(Device::class);
     }
 
-    public function search(array $filters = null)
+    public function search(array $filters) : Collection
     {
-        if ($filters) {
-            return [];
+        if (count($filters) > 1) {
+            return $this->where('brand_id', $filters['brand'])->get();
         }
-        return $this->all();
+        return $this->where('brand_id', $filters['brand'])->get();
     }
 }

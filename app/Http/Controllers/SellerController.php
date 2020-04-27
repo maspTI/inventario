@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Seller;
+use App\Rules\CNPJ;
 use Illuminate\Http\Request;
 
 class SellerController extends Controller
@@ -35,7 +36,15 @@ class SellerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        request()->validate([
+            'name' => 'required',
+            'cnpj' => ['required', 'unique:sellers,cnpj', new CNPJ]
+        ]);
+
+        return Seller::create([
+            'name' => strtolower(request('name')),
+            'cnpj' => request('cnpj')
+        ]);
     }
 
     /**

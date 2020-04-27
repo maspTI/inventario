@@ -14,7 +14,11 @@ class PatternController extends Controller
      */
     public function index()
     {
-        //
+        if (request()->wantsJson()) {
+            $patterns = new Pattern;
+            return $patterns->search(request()->all());
+        }
+        return view('patterns.index');
     }
 
     /**
@@ -35,7 +39,15 @@ class PatternController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        request()->validate([
+            'brand' => 'required',
+            'name' => 'required'
+        ]);
+
+        return Pattern::create([
+            'brand_id' => request('brand'),
+            'name' => strtolower(request('name'))
+        ]);
     }
 
     /**

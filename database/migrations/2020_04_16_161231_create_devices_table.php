@@ -23,7 +23,8 @@ class CreateDevicesTable extends Migration
             $table->unsignedBigInteger('department_id');
             $table->string('ticket_number')->nullable();
             $table->date('bought_at')->nullable();
-            $table->string('property_tag')->nullable();
+            $table->string('property_tag')->unique();
+            $table->string('serial_number')->nullable();
             $table->json('specifications')->nullable();
             $table->integer('status')->default(1);
             $table->timestamps();

@@ -8,7 +8,10 @@ use App\Device;
 use App\Seller;
 use App\Pattern;
 use App\Category;
+use Carbon\Carbon;
+use Illuminate\View\View;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class DeviceController extends Controller
 {
@@ -27,20 +30,18 @@ class DeviceController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create() : View
     {
         $categories = new Category;
         $brands = new Brand;
         $sellers = new Seller;
         $users = new User;
-        $patterns = new Pattern;
 
         return view('devices.create')->with([
             'categories' => $categories->search(),
             'brands' => $brands->search(),
             'sellers' => $sellers->search(),
             'users' => $users->search(),
-            'patterns' => $patterns->search()
         ]);
     }
 
@@ -50,9 +51,34 @@ class DeviceController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request) : void
     {
-        //
+        request()->validate([
+            'brand' => 'required',
+            'seller' => 'required',
+            'holder' => 'nullable',
+            'pattern' => 'required',
+            'category' => 'required',
+            'ticket_number' => 'required',
+            'bought_at' => 'required',
+            'property_tag' => 'required|unique:devices,property_tag',
+            'serial_number' => 'nullable|unique:devices,serial_number',
+            'specs' => 'nullable'
+        ]);
+
+        Device::Create([
+            'brand_id' => request('brand')['id'],
+            'seller_id' => request('seller')['id'],
+            'holder_id' => request('holder')['id'],
+            'pattern_id' => request('pattern')['id'],
+            'category_id' => request('category')['id'],
+            'ticket_number' => request('ticket_number'),
+            'bought_at' => new Carbon(request('bought_at')),
+            'property_tag' => request('property_tag'),
+            'serial_number' => request('serial_number'),
+            'specifications' => request('specs'),
+            'department_id' => 8
+        ]);
     }
 
     /**

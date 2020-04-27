@@ -7,13 +7,19 @@
 // Material-Bootstrap
 @import "~material-dashboard/assets/scss/material-dashboard.scss";
 
-// Bootstrap Spinners
+// Bootstrap Functions
 @import "~bootstrap/scss/_functions.scss";
 @import "~bootstrap/scss/_variables.scss";
+@import "~bootstrap/scss/_mixins.scss";
+
+// Bootstrap Spinners
 @import "~bootstrap/scss/_spinners.scss";
 
-// Flag-Icon-CSS
-// @import "~flag-icon-css/sass/flag-icon.scss";
-
+// Custom CSS
 @import "variables";
 @import "custom";
+
+// Vue Date-Picker
+$default-color: #555;
+$primary-color: $masp;
+@import "~vue2-datepicker/scss/index.scss";
