@@ -22,8 +22,8 @@ class Pattern extends Model
     public function search(array $filters) : Collection
     {
         if (count($filters) > 1) {
-            return $this->where('brand_id', $filters['brand'])->get();
+            return $this->where('brand_id', $filters['brand'])->orderBy('name')->get();
         }
-        return $this->where('brand_id', $filters['brand'])->get();
+        return $this->where('brand_id', $filters['brand'])->orderBy('name')->get();
     }
 }

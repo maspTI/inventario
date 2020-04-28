@@ -10,14 +10,14 @@ class Device extends Model
     use SoftDeletes;
 
     protected $fillable = [
-        'brand_id','seller_id','holder_id','pattern_id','category_id','department_id','ticket_number','bought_at','property_tag','specifications','status'
+        'brand_id','seller_id','holder_id','pattern_id','category_id','department_id', 'subdepartment_id','ticket_number','bought_at','property_tag','specifications','status'
     ];
 
     protected $casts = ['specifications' => 'array'];
 
     public function holder()
     {
-        return $this->belongsTo(User::class, 'holder_id')->with(['department', 'roles']);
+        return $this->belongsTo(User::class, 'holder_id')->with(['department', 'subdepartment', 'roles']);
     }
 
     public function brand()
@@ -48,7 +48,16 @@ class Device extends Model
     public function search(array $filters = null)
     {
         if ($filters) {
-            return [];
+            return $this->where('department_id', auth()->user()->department_id)
+                ->where(function ($query) {
+                    if (auth()->user()->subdepartment) {
+                        return $query->where('subdepartment_id', auth()->user()->subdepartment->id);
+                    }
+                })
+                ->with([
+                    'department', 'holder', 'brand', 'category', 'seller', 'pattern'
+                ])
+                ->paginate($filters['paginate']);
         }
         return $this->all();
     }

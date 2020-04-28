@@ -15,6 +15,9 @@ window.flash = function(message, level = "success") {
 };
 
 window.swal = require("sweetalert2");
+
+window.moment = require("moment");
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -42,6 +45,14 @@ Vue.component(
 Vue.component(
     "create-update-device-component",
     require("./components/Devices/CreateUpdate.vue").default
+);
+Vue.component(
+    "index-device-component",
+    require("./components/Devices/Index.vue").default
+);
+Vue.component(
+    "modal-device-component",
+    require("./components/Devices/Modal.vue").default
 );
 
 // Patterns

@@ -22,7 +22,11 @@ class DeviceController extends Controller
      */
     public function index()
     {
-        //
+        if (request()->wantsJson()) {
+            $devices = new Device;
+            return $devices->search(request()->all());
+        }
+        return view('devices.index');
     }
 
     /**
@@ -62,7 +66,7 @@ class DeviceController extends Controller
             'ticket_number' => 'required',
             'bought_at' => 'required',
             'property_tag' => 'required|unique:devices,property_tag',
-            'serial_number' => 'nullable|unique:devices,serial_number',
+            'serial_number' => 'nullable',
             'specs' => 'nullable'
         ]);
 
@@ -77,7 +81,8 @@ class DeviceController extends Controller
             'property_tag' => request('property_tag'),
             'serial_number' => request('serial_number'),
             'specifications' => request('specs'),
-            'department_id' => 8
+            'department_id' => auth()->user()->department->id,
+            'subdepartment_id' => auth()->user()->subdepartment != null ? auth()->user()->subdepartment->id : null
         ]);
     }
 

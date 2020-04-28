@@ -16,11 +16,12 @@ class CreateDevicesTable extends Migration
         Schema::create('devices', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('brand_id');
-            $table->unsignedBigInteger('seller_id');
+            $table->unsignedBigInteger('seller_id')->nullable();
             $table->unsignedBigInteger('holder_id')->nullable();
             $table->unsignedBigInteger('pattern_id');
             $table->unsignedBigInteger('category_id');
             $table->unsignedBigInteger('department_id');
+            $table->unsignedBigInteger('subdepartment_id')->nullable();
             $table->string('ticket_number')->nullable();
             $table->date('bought_at')->nullable();
             $table->string('property_tag')->unique();
@@ -36,6 +37,7 @@ class CreateDevicesTable extends Migration
             $table->foreign('pattern_id')->references('id')->on('patterns');
             $table->foreign('category_id')->references('id')->on('categories');
             $table->foreign('department_id')->references('id')->on('admin.departments');
+            $table->foreign('subdepartment_id')->references('id')->on('admin.subdepartments');
         });
     }
 

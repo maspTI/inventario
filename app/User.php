@@ -14,7 +14,7 @@ class User extends Authenticatable
     protected $connection = 'mysql2';
 
     protected $fillable = [
-        'department_id','name','email','avatar','username','status',
+        'department_id', 'subdepartment_id','name','email','avatar','username','status',
     ];
 
     protected $hidden = ['remember_token'];
@@ -22,6 +22,14 @@ class User extends Authenticatable
     public function department()
     {
         return $this->belongsTo(Department::class);
+    }
+
+    /**
+     * @Route("/")
+     */
+    public function subdepartment()
+    {
+        return $this->belongsTo(Subdepartment::class);
     }
 
     public function roles()
