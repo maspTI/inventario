@@ -11,6 +11,8 @@
                             <th>Categoria</th>
                             <th>Modelo</th>
                             <th>Marca</th>
+                            <th>Funcionário</th>
+                            <th>Departamento</th>
                             <th>Ações</th>
                         </tr>
                     </thead>

@@ -9,6 +9,16 @@
             v-text="device.pattern.name"
         ></td>
         <td class="text-capitalize text-break" v-text="device.brand.name"></td>
+        <td
+            class="text-capitalize text-break"
+            v-text="device.holder ? device.holder.name : 'Não informado'"
+        ></td>
+        <td
+            class="text-capitalize text-break"
+            v-text="
+                device.holder ? device.holder.department.name : 'Não informado'
+            "
+        ></td>
         <td>
             <div class="col-md-12 d-flex justify-content-around flex-wrap">
                 <button

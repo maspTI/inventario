@@ -11,7 +11,11 @@
                         v-model="form.specification"
                         v-if="edit"
                     />
-                    <span v-else v-text="form.specification"></span>
+                    <span
+                        class="text-capitalize"
+                        v-else
+                        v-text="form.specification"
+                    ></span>
                 </div>
             </div>
             <div class="col-md-8">
@@ -25,7 +29,11 @@
                             v-model="form.description"
                             v-if="edit"
                         ></textarea>
-                        <span v-else v-text="form.description"></span>
+                        <span
+                            class="text-uppercase"
+                            v-else
+                            v-text="form.description"
+                        ></span>
                     </div>
                 </div>
             </div>
@@ -47,10 +55,11 @@
 </template>
 <script>
 export default {
-    props: ["id"],
+    props: ["spec"],
     data() {
         return {
             form: {
+                id: "",
                 specification: "",
                 description: "",
             },
@@ -61,7 +70,6 @@ export default {
         add() {
             if (this.form.specification != "" && this.form.description != "") {
                 if (this.edit) {
-                    this.form.id = this.id;
                     window.events.$emit("add_spec", this.form);
                 }
 
@@ -74,8 +82,20 @@ export default {
             );
         },
         remove() {
-            window.events.$emit("remove_spec", this.id);
+            window.events.$emit("remove_spec", this.form);
         },
+    },
+    created() {
+        this.form = {
+            id: this.spec.id,
+            specification: this.spec.specification,
+            description: this.spec.description,
+        };
+
+        this.edit =
+            this.form.specification != "" && this.form.description != ""
+                ? false
+                : true;
     },
 };
 </script>

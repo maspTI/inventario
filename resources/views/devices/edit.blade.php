@@ -14,10 +14,12 @@
                     :categories_db="{{ $categories }}"
                     :users_db="{{ $users }}"
                     :brands_db="{{ $brands }}"
+                    :patterns_db="{{ $patterns }}"
                     :sellers_db="{{ $sellers }}"
                     http_verb="put"
-                    url="/devices"
-                    message="Dispositivo cadastrado com sucesso!"
+                    url="/devices/{{ $device->id }}"
+                    message="Dispositivo atualizado com sucesso!"
+                    :device="{{ $device }}"
                 ></create-update-device-component>
                 <modal-create-category-component></modal-create-category-component>
                 <modal-create-brand-component></modal-create-brand-component>

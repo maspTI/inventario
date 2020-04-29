@@ -32,6 +32,11 @@
                         </button>
                     </div>
                 </div>
+                <small
+                    class="text-danger"
+                    v-text="form.errors.get('category')"
+                    v-if="form.errors.has('category')"
+                ></small>
             </div>
             <div class="col-md-6 form-group">
                 <label for="category">Marca</label>
@@ -61,6 +66,11 @@
                         </button>
                     </div>
                 </div>
+                <small
+                    class="text-danger"
+                    v-text="form.errors.get('brand')"
+                    v-if="form.errors.has('brand')"
+                ></small>
             </div>
             <div class="col-md-6 form-group">
                 <label for="category">Modelo</label>
@@ -89,6 +99,11 @@
                         </button>
                     </div>
                 </div>
+                <small
+                    class="text-danger"
+                    v-text="form.errors.get('pattern')"
+                    v-if="form.errors.has('pattern')"
+                ></small>
             </div>
             <div class="col-md-6 form-group">
                 <label for="category">Fornecedor</label>
@@ -117,6 +132,11 @@
                         </button>
                     </div>
                 </div>
+                <small
+                    class="text-danger"
+                    v-text="form.errors.get('seller')"
+                    v-if="form.errors.has('seller')"
+                ></small>
             </div>
             <div class="col-md-6 form-group">
                 <label for="category">Funcionário</label>
@@ -133,6 +153,11 @@
                     label="name"
                     v-model="form.holder"
                 />
+                <small
+                    class="text-danger"
+                    v-text="form.errors.get('holder')"
+                    v-if="form.errors.has('holder')"
+                ></small>
             </div>
             <div class="col-md-6 form-group d-flex flex-column">
                 <label>Data da Compra</label>
@@ -141,6 +166,11 @@
                     format="DD/MM/YYYY"
                     v-model="form.bought_at"
                 ></date-picker>
+                <small
+                    class="text-danger"
+                    v-text="form.errors.get('bought_at')"
+                    v-if="form.errors.has('bought_at')"
+                ></small>
             </div>
             <div class="col-md-6">
                 <div class="form-group bmd-form-group">
@@ -150,6 +180,11 @@
                         class="form-control"
                         v-model="form.ticket_number"
                     />
+                    <small
+                        class="text-danger"
+                        v-text="form.errors.get('ticket_number')"
+                        v-if="form.errors.has('ticket_number')"
+                    ></small>
                 </div>
             </div>
             <div class="col-md-6">
@@ -160,6 +195,11 @@
                         class="form-control"
                         v-model="form.property_tag"
                     />
+                    <small
+                        class="text-danger"
+                        v-text="form.errors.get('property_tag')"
+                        v-if="form.errors.has('property_tag')"
+                    ></small>
                 </div>
             </div>
             <div class="col-md-6">
@@ -170,6 +210,11 @@
                         class="form-control"
                         v-model="form.serial_number"
                     />
+                    <small
+                        class="text-danger"
+                        v-text="form.errors.get('serial_number')"
+                        v-if="form.errors.has('serial_number')"
+                    ></small>
                 </div>
             </div>
             <div class="container-fluid mt-3">
@@ -178,9 +223,9 @@
                         <h4>Especificações</h4>
                     </div>
                     <spec-component
-                        v-for="spec in form.specs"
+                        v-for="spec in form.specifications"
                         :key="spec.id"
-                        :id="spec.id"
+                        :spec="spec"
                     />
                     <div class="col-md-12 d-flex justify-content-start">
                         <button class="btn btn-success" @click.prevent="add">
@@ -201,7 +246,17 @@ import DatePicker from "vue2-datepicker";
 import "vue2-datepicker/locale/pt-br";
 import SpecComponent from "./Specs";
 export default {
-    props: ["categories_db", "brands_db", "users_db", "sellers_db"],
+    props: [
+        "categories_db",
+        "brands_db",
+        "patterns_db",
+        "users_db",
+        "sellers_db",
+        "device",
+        "message",
+        "http_verb",
+        "url",
+    ],
     data() {
         return {
             form: new Form({
@@ -211,10 +266,10 @@ export default {
                 pattern: "",
                 category: "",
                 ticket_number: "",
-                bought_at: new Date(),
+                bought_at: "",
                 property_tag: "",
                 serial_number: "",
-                specs: [],
+                specifications: [],
             }),
             categories: [],
             brands: [],
@@ -231,11 +286,10 @@ export default {
     methods: {
         send() {
             window.events.$emit("loading", true);
-            this.form
-                .post("/devices")
+            this.form[this.http_verb](this.url)
                 .then((result) => {
                     window.events.$emit("loading", false);
-                    window.flash("Dispositivo cadastrado com sucesso!");
+                    window.flash(this.message);
                     window.location = "/devices";
                 })
                 .catch((errors) => {
@@ -252,6 +306,7 @@ export default {
                 .get(`/patterns?brand=${brand.id}`)
                 .then((result) => {
                     this.patterns = result.data;
+
                     this.form.pattern = {};
                 })
                 .catch((errors) => {
@@ -259,12 +314,25 @@ export default {
                 });
         },
         add() {
-            this.form.specs.push({
-                id: Math.random(),
+            this.form.specifications.push({
+                id:
+                    Math.random()
+                        .toString(36)
+                        .substring(2, 15) +
+                    Math.random()
+                        .toString(36)
+                        .substring(2, 12),
+                specification: "",
+                description: "",
             });
         },
     },
     created() {
+        if (this.device) {
+            this.form = new Form({ ...this.device });
+            this.patterns = this.patterns_db;
+        }
+
         this.categories = this.categories_db;
         this.brands = this.brands_db;
         this.users = this.users_db;
@@ -291,7 +359,7 @@ export default {
         });
 
         window.events.$on("add_spec", (formSpec) => {
-            this.form.specs.forEach((spec) => {
+            this.form.specifications.forEach((spec) => {
                 if (spec.id == formSpec.id) {
                     spec.description = formSpec.description;
                     spec.specification = formSpec.specification;
@@ -299,10 +367,10 @@ export default {
             });
         });
 
-        window.events.$on("remove_spec", (removedId) => {
-            this.form.specs.forEach((spec, index) => {
-                if (spec.id == removedId) {
-                    this.form.specs.splice(index, 1);
+        window.events.$on("remove_spec", (removedSpec) => {
+            this.form.specifications.forEach((spec, index) => {
+                if (spec.id == removedSpec.id) {
+                    this.form.specifications.splice(index, 1);
                 }
             });
         });

@@ -12,6 +12,7 @@ use Carbon\Carbon;
 use Illuminate\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Validation\Rule;
 
 class DeviceController extends Controller
 {
@@ -58,16 +59,7 @@ class DeviceController extends Controller
     public function store(Request $request) : void
     {
         request()->validate([
-            'brand' => 'required',
-            'seller' => 'required',
-            'holder' => 'nullable',
-            'pattern' => 'required',
-            'category' => 'required',
-            'ticket_number' => 'required',
-            'bought_at' => 'required',
-            'property_tag' => 'required|unique:devices,property_tag',
-            'serial_number' => 'nullable',
-            'specs' => 'nullable'
+
         ]);
 
         Device::Create([
@@ -77,10 +69,10 @@ class DeviceController extends Controller
             'pattern_id' => request('pattern')['id'],
             'category_id' => request('category')['id'],
             'ticket_number' => request('ticket_number'),
-            'bought_at' => new Carbon(request('bought_at')),
+            'bought_at' => request('bought_at') != null ? new Carbon(request('bought_at')) : null,
             'property_tag' => request('property_tag'),
             'serial_number' => request('serial_number'),
-            'specifications' => request('specs'),
+            'specifications' => request('specifications'),
             'department_id' => auth()->user()->department->id,
             'subdepartment_id' => auth()->user()->subdepartment != null ? auth()->user()->subdepartment->id : null
         ]);
@@ -105,7 +97,19 @@ class DeviceController extends Controller
      */
     public function edit(Device $device)
     {
-        //
+        $categories = new Category;
+        $brands = new Brand;
+        $sellers = new Seller;
+        $users = new User;
+
+        return view('devices.edit')->with([
+            'device' => Device::whereId($device->id)->with('category', 'brand', 'holder', 'seller', 'pattern')->first(),
+            'categories' => $categories->search(),
+            'brands' => $brands->search(),
+            'patterns' => $device->brand->patterns,
+            'sellers' => $sellers->search(),
+            'users' => $users->search(),
+        ]);
     }
 
     /**
@@ -117,7 +121,22 @@ class DeviceController extends Controller
      */
     public function update(Request $request, Device $device)
     {
-        //
+        $this->requestValidate($request, $device);
+
+        return $device->update([
+            'brand_id' => request('brand')['id'],
+            'seller_id' => request('seller') != null ? request('seller')['id'] : null,
+            'holder_id' => request('holder') != null ? request('holder')['id'] : null,
+            'pattern_id' => request('pattern')['id'],
+            'category_id' => request('category')['id'],
+            'ticket_number' => request('ticket_number'),
+            'bought_at' => request('bought_at') != null ? new Carbon(request('bought_at')) : null,
+            'property_tag' => request('property_tag'),
+            'serial_number' => request('serial_number'),
+            'specifications' => request('specifications'),
+            'department_id' => auth()->user()->department->id,
+            'subdepartment_id' => auth()->user()->subdepartment != null ? auth()->user()->subdepartment->id : null
+        ]);
     }
 
     /**
@@ -129,5 +148,27 @@ class DeviceController extends Controller
     public function destroy(Device $device)
     {
         //
+    }
+
+    /**
+     *
+     */
+    public function requestValidate(Request $request, Device $device = null)
+    {
+        request()->validate([
+            'brand' => 'required',
+            'seller' => 'nullable',
+            'holder' => 'nullable',
+            'pattern' => 'required',
+            'category' => 'required',
+            'ticket_number' => 'nullable',
+            'bought_at' => 'nullable',
+            'property_tag' => [
+                'required',
+                $device != null ? Rule::unique('devices', 'property_tag')->ignore($device->id) : 'unique:devices,property_tag'
+            ],
+            'serial_number' => 'nullable',
+            'specifications' => 'nullable'
+        ]);
     }
 }
