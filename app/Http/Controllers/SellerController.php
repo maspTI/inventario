@@ -15,7 +15,10 @@ class SellerController extends Controller
      */
     public function index()
     {
-        //
+        if (request()->wantsJson()) {
+            $sellers = new Seller;
+            return $sellers->search(request()->all());
+        }
     }
 
     /**

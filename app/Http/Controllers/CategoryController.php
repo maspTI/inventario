@@ -14,7 +14,10 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+        if (request()->wantsJson()) {
+            $categories = new Category;
+            return $categories->search(request()->all());
+        }
     }
 
     /**

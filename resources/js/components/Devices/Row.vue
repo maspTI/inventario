@@ -19,6 +19,10 @@
                 device.holder ? device.holder.department.name : 'Não informado'
             "
         ></td>
+        <td
+            class="text-capitalize text-break"
+            v-text="`${device.status ? 'Ativo' : 'Inativo'}`"
+        ></td>
         <td>
             <div class="col-md-12 d-flex justify-content-around flex-wrap">
                 <button
@@ -36,6 +40,15 @@
                         'btn-dark': device.status,
                         'btn-success': !device.status,
                     }"
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    :title="
+                        `${
+                            device.status
+                                ? 'Inativar dispositivo'
+                                : 'Ativar dispositivo'
+                        }`
+                    "
                     @click.prevent="send"
                 >
                     <i class="far fa-eye" v-if="!device.status"></i>
@@ -62,11 +75,12 @@ export default {
             function() {
                 axios
                     .patch(`/devices/${this.device.id}`, {
-                        change_status: this.device.status ? false : true,
+                        change_status: true,
                     })
                     .then((result) => {
                         this.device.status = result.data.status;
-                        window.flash("Função alterada com sucesso!");
+                        this.device.holder = result.data.holder;
+                        window.flash("Status alterado com sucesso!");
                     })
                     .catch((errors) =>
                         window.flash(

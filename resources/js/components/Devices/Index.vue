@@ -13,6 +13,7 @@
                             <th>Marca</th>
                             <th>Funcionário</th>
                             <th>Departamento</th>
+                            <th>Status</th>
                             <th>Ações</th>
                         </tr>
                     </thead>
@@ -46,6 +47,9 @@ export default {
                 paginate: 10,
                 search: "",
                 status: "all",
+                brand: "all",
+                category: "all",
+                seller: "all",
             },
         };
     },
@@ -59,7 +63,7 @@ export default {
             axios
                 .get(
                     url === null
-                        ? `/devices?paginate=${this.filters.paginate}&search=${this.filters.search}&status=${this.filters.status}`
+                        ? `/devices?paginate=${this.filters.paginate}&search=${this.filters.search}&status=${this.filters.status}&brand=${this.filters.brand}&category=${this.filters.category}&seller=${this.filters.seller}`
                         : url
                 )
                 .then((result) => {
@@ -85,7 +89,7 @@ export default {
 
         window.events.$on("page", (url) => {
             this.fetch(
-                `${url}&paginate=${this.filters.paginate}&search=${this.filters.search}&status=${this.filters.status}`
+                `${url}&paginate=${this.filters.paginate}&search=${this.filters.search}&status=${this.filters.status}&brand=${this.filters.brand}&category=${this.filters.category}&seller=${this.filters.seller}`
             );
         });
     },

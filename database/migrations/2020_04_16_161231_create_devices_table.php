@@ -27,7 +27,7 @@ class CreateDevicesTable extends Migration
             $table->string('property_tag')->unique();
             $table->string('serial_number')->nullable();
             $table->json('specifications')->nullable();
-            $table->integer('status')->default(1);
+            $table->timestamp('status')->nullable();
             $table->timestamps();
             $table->softDeletes();
 

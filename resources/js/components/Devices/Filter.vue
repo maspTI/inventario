@@ -46,6 +46,48 @@
                 </select>
             </div>
         </div>
+        <div class="col-md-4">
+            <div class="form-group bmd-form-group">
+                <label for="status">Marca</label>
+                <select
+                    name="brand"
+                    id="brand"
+                    class="form-control text-capitalize"
+                    v-model="filters.brand"
+                    @change="search"
+                >
+                    <option value="all">Todas</option>
+                    <option
+                        class="text-capitalize"
+                        v-for="brand in brands"
+                        :value="brand.name"
+                        :key="brand.id"
+                        v-text="brand.name"
+                    ></option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group bmd-form-group">
+                <label for="status">Categoria</label>
+                <select
+                    name="category"
+                    id="category"
+                    class="form-control text-capitalize"
+                    v-model="filters.category"
+                    @change="search"
+                >
+                    <option value="all">Todas</option>
+                    <option
+                        class="text-capitalize"
+                        v-for="category in categories"
+                        :value="category.name"
+                        :key="category.id"
+                        v-text="category.name"
+                    ></option>
+                </select>
+            </div>
+        </div>
     </div>
 </template>
 <script>
@@ -55,14 +97,35 @@ export default {
             filters: {
                 paginate: 10,
                 search: "",
-                status: "all"
-            }
+                status: "all",
+                brand: "all",
+                category: "all",
+                seller: "all",
+            },
+            brands: [],
+            categories: [],
+            sellers: [],
         };
     },
     methods: {
         search: _.debounce(function() {
             window.events.$emit("search", this.filters);
-        }, 350)
-    }
+        }, 350),
+        fetch(entity) {
+            window.axios
+                .get(`/${entity}`)
+                .then(({ data }) => {
+                    this[entity] = data;
+                })
+                .catch((errors) => {
+                    window.flash("Algo deu errado.", "danger");
+                });
+        },
+    },
+    created() {
+        this.fetch("brands");
+        this.fetch("categories");
+        this.fetch("sellers");
+    },
 };
 </script>

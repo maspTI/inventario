@@ -88,13 +88,6 @@ class PatternsTableSeeder extends Seeder
 
             [
                 'brand_id' => $brand,
-                'name' => 'inspiron 7560',
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now(),
-            ],
-
-            [
-                'brand_id' => $brand,
                 'name' => 'latitude 3450',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
@@ -160,6 +153,63 @@ class PatternsTableSeeder extends Seeder
             [
                 'brand_id' => $brand,
                 'name' => 'n1108p-on',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
+
+            // Servidores
+            [
+                'brand_id' => $brand,
+                'name' => 't420',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
+
+            [
+                'brand_id' => $brand,
+                'name' => 't430',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
+
+            [
+                'brand_id' => $brand,
+                'name' => 't300',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
+
+            [
+                'brand_id' => $brand,
+                'name' => 't320',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
+
+            [
+                'brand_id' => $brand,
+                'name' => 'nx430',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
+
+            [
+                'brand_id' => $brand,
+                'name' => 'inspiron 530',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
+
+            [
+                'brand_id' => $brand,
+                'name' => 'optplex 7050',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
+
+            [
+                'brand_id' => $brand,
+                'name' => 'inspiron 7560',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],

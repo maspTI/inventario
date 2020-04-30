@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -45,20 +46,51 @@ class Device extends Model
         return $this->belongsTo(Department::class);
     }
 
+    public function changeStatus()
+    {
+        $this->update([
+            'status' =>  $this->status != null ? null : Carbon::now(),
+            'holder_id' => null
+        ]);
+
+        return $this;
+    }
+
     public function search(array $filters = null)
     {
-        if ($filters) {
-            return $this->where('department_id', auth()->user()->department_id)
-                ->where(function ($query) {
-                    if (auth()->user()->subdepartment) {
-                        return $query->where('subdepartment_id', auth()->user()->subdepartment->id);
-                    }
+        return $this->where('department_id', auth()->user()->department_id)
+            ->where(function ($query) {
+                if (auth()->user()->subdepartment) {
+                    return $query->where('subdepartment_id', auth()->user()->subdepartment->id);
+                }
+            })
+            ->where(function ($query) use ($filters) {
+                $query->whereHas('brand', function ($query) use ($filters) {
+                    $query->where('name', 'LIKE', "%{$filters['search']}%");
                 })
-                ->with([
-                    'department', 'holder', 'brand', 'category', 'seller', 'pattern'
-                ])
-                ->paginate($filters['paginate']);
-        }
-        return $this->all();
+                ->orWhereHas('category', function ($query) use ($filters) {
+                    $query->where('name', 'LIKE', "%{$filters['search']}%");
+                })
+                ->orWhereHas('pattern', function ($query) use ($filters) {
+                    $query->where('name', 'LIKE', "%{$filters['search']}%");
+                })
+                ->orWhereHas('seller', function ($query) use ($filters) {
+                    $query->where('name', 'LIKE', "%{$filters['search']}%")
+                        ->orWhere('cnpj', 'LIKE', "%{$filters['search']}%");
+                })
+                ->orWhere('property_tag', "LIKE", "%{$filters['search']}%")
+                ->orWhereJsonContains('specifications', ['description' => strtolower($filters['search'])])
+                ->orWhereJsonContains('specifications', ['specification' => strtolower($filters['search'])]);
+            })
+            ->whereHas('brand', function ($query) use ($filters) {
+                $query->where('name', "LIKE", $filters['brand'] == 'all' ? '%%' : "%{$filters['brand']}%");
+            })
+            ->whereHas('category', function ($query) use ($filters) {
+                $query->where('name', "LIKE", $filters['category'] == 'all' ? '%%' : "%{$filters['category']}%");
+            })
+            ->with([
+                'department', 'holder', 'brand', 'category', 'seller', 'pattern'
+            ])
+            ->paginate($filters['paginate']);
     }
 }

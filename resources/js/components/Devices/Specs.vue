@@ -70,6 +70,8 @@ export default {
         add() {
             if (this.form.specification != "" && this.form.description != "") {
                 if (this.edit) {
+                    this.form.specification = this.form.specification.toLowerCase();
+                    this.form.description = this.form.description.toLowerCase();
                     window.events.$emit("add_spec", this.form);
                 }
 

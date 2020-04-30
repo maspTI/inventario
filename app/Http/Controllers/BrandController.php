@@ -14,7 +14,10 @@ class BrandController extends Controller
      */
     public function index()
     {
-        //
+        if (request()->wantsJson()) {
+            $brands = new Brand;
+            return $brands->search(request()->all());
+        }
     }
 
     /**

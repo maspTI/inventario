@@ -19,7 +19,7 @@
                     <p>Adicionar Dispositivo</p>
                 </a>
             </li>
-            <li class="nav-item {{ url()->current() == route('categories.index') ? 'active' : '' }}">
+            {{-- <li class="nav-item {{ url()->current() == route('categories.index') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('categories.index') }}">
                     <p>Categorias</p>
                 </a>
@@ -48,7 +48,7 @@
                 <a class="nav-link" href="{{ route('patterns.index') }}">
                     <p>Adicionar Modelo</p>
                 </a>
-            </li>
+            </li> --}}
         </ul>
     </div>
 </div>

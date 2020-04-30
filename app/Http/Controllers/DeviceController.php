@@ -58,9 +58,7 @@ class DeviceController extends Controller
      */
     public function store(Request $request) : void
     {
-        request()->validate([
-
-        ]);
+        $this->requestValidate($request);
 
         Device::Create([
             'brand_id' => request('brand')['id'],
@@ -73,6 +71,7 @@ class DeviceController extends Controller
             'property_tag' => request('property_tag'),
             'serial_number' => request('serial_number'),
             'specifications' => request('specifications'),
+            'status' => Carbon::now(),
             'department_id' => auth()->user()->department->id,
             'subdepartment_id' => auth()->user()->subdepartment != null ? auth()->user()->subdepartment->id : null
         ]);
@@ -121,6 +120,11 @@ class DeviceController extends Controller
      */
     public function update(Request $request, Device $device)
     {
+        if (request()->has('change_status')) {
+            $device = Device::whereId($device->id)->with('holder')->first();
+            return $device->changeStatus()->fresh();
+        }
+
         $this->requestValidate($request, $device);
 
         return $device->update([
