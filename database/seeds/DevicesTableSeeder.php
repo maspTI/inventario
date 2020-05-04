@@ -2526,82 +2526,2172 @@ class DevicesTableSeeder extends Seeder
             ],
 
             // Design
+            [
+                'brand_id' => Brand::where('name', 'apple')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => Paula Tinoco,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'imac')->first()->id,
+                'category_id' => Category::where('name', 'desktop')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '001799',
+                'serial_number' => 'c02k62kwdnct',
+                'specifications' => null,
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
 
-            // PAULA TINOCO    001799  DESKTOP APPLE   IMAC 25"    -   -   C02K62KWDNCT
-            // CLAU LIMA   002457  DESKTOP APPLE   IMAC 25"    -   -   -
-            // BARBARA CATTA   001863  DESKTOP APPLE   IMAC 25"    -   -   C02N801QFY0T
-            // GUILHERME PACOLA    002025  DESKTOP APPLE   IMAC 25"    -   -   C02P92J9FY0T
+            [
+                'brand_id' => Brand::where('name', 'apple')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => CLAU LIMA,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'imac')->first()->id,
+                'category_id' => Category::where('name', 'desktop')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002457',
+                'serial_number' => null,
+                'specifications' => null,
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
 
-            // ANDRÉ MESQUITA  002099  NOTEBOOK    APPLE   MAC PRO -   -   C1MPM11YDTY3
-            // HORRANA SANTOS  002133  NOTEBOOK    DELL    LATITUDE 3450   F1XM172 32768656526 -
-            // AMANDA CARNEIRO 001859  NOTEBOOK    APPLE   MAC PRO -   -   C1MNPSSEDTY3
-            // STELA MARTINS   002454  NOTEBOOK    DELL    LATITUDE 3480   5T0VFP2 12638897462 -
-            // YASMINE LIMA    002127  NOTEBOOK    DELL    LATITUDE 3450   5GQHC72 11895849470 -       Problemas com a tela
-            // WALDIAEL BRAZ   002452  NOTEBOOK    DELL    LATITUDE 3480   5T1SFP2 12640437110 -
-            // JULIA CAVAZZINI 002422  NOTEBOOK    DELL    LATITUDE 3480   DLKXFP2 29603112374 -
-            // ERIC XAVIER 002439  NOTEBOOK    DELL    LATITUDE 3480   DFKZRP2 29240424182 -
+            [
+                'brand_id' => Brand::where('name', 'apple')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => BARBARA CATTA,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'imac')->first()->id,
+                'category_id' => Category::where('name', 'desktop')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '001863',
+                'serial_number' => 'c02n801qfy0t',
+                'specifications' => null,
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
 
-            // DANIELA COTRIM  002520  NOTEBOOK    DELL    LATITUDE 3490   8FMVFV2 18359669774 -
-            // RODRIGO AVELAR  002434  NOTEBOOK    DELL    INSPIRON 7472   GPWSWQ2 36395268266 -
-            // FERNANDO NETTO  002126  NOTEBOOK    DELL        5GNQC72 11891230526
-            // GABRIELA VALDANHA   002098  NOTEBOOK    APPLE   MAC PRO -   -   C1MP41JGDTY3
-            // MARIANA MARQUES 001902  NOTEBOOK    DELL    LATITUDE 3470   H996CD2 37564907798 -
-            // COMUNICAÇÃO 002279  DESKTOP DELL    XPS 7DBT2J2 16043368718 -
+            [
+                'brand_id' => Brand::where('name', 'apple')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => GUILHERME PACOLA,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'imac')->first()->id,
+                'category_id' => Category::where('name', 'desktop')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002025',
+                'serial_number' => 'c02p92j9fy0t',
+                'specifications' => null,
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
 
-            // MARINA MOURA    002312  NOTEBOOK    DELL    LATITUDE 3470   J95HJ82 41912276114 -
-            // MARINA REBOUÇAS 002463  NOTEBOOK    DELL    INSPIRON 7472   4XKQ9R2 10737331166 -
-            // AMANDA NEGRI    002786  NOTEBOOK    DELL    VOSTRO 5481 8DM9K03 18237716355 -
-            // JACQUELINE REIS 002017  NOTEBOOK    DELL    LATITUDE 3440   2JDG342 5525007554  -
-            // FERNANDO GALLO  002004  NOTEBOOK    DELL    LATITUDE 3440   JGDG342 42348908738 -       Problemas com bateria
-            // MAICON WILLIAM FERREIRA 002012  NOTEBOOK    DELL    LATITUDE 3440   9FDG342 20520619202 -
-            // LEONARDO RODRIGUES  002125  NOTEBOOK    DELL    LATITUDE 3450   5GQMC72 11896082750 -
-            // STEFFÂNIA PRATA 002299  NOTEBOOK    DELL    LATITUDE 3480   4KTJSL2 9966085238  -
-            // ADRIANA RODRIGUES   002194  NOTEBOOK    DELL        9HWS9B2 20674032158 -
-            // ISABELLA MALZONE    002191  NOTEBOOK    DELL    LATITUDE 3450   9HXV9B2 20675851742 -
-            // GIULIA PERONDI  002196  NOTEBOOK    DELL    LATITUDE 3450   9HXX2B  20675945054 -
-            // MARIANE DALL'AGNOL  002321  NOTEBOOK    DELL    INSPIRON 7460   46393N2 9075389870  -
-            // JULIANA ZIEBELL 003152  NOTEBOOK    APPLE   MAC PRO         C02K93SMD6N
+            // Mediacao
+            [
+                'brand_id' => Brand::where('name', 'apple')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => ANDRÉ MESQUITA,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'macbook pro')->first()->id,
+                'category_id' => Category::where('name', 'notebook')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002099',
+                'serial_number' => 'c1mpm11ydty3',
+                'specifications' => null,
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
 
-            // CAROLINA ROSSETTI   002392  NOTEBOOK    DELL    LATITUDE 3480   H4V2QK2 37299360242 -
-            // JUSSARA NASCIMENTO  002789  NOTEBOOK    DELL    LATITUDE 3400   DRPJSY2 29973671498 -
-            // LAIS ALMEIDA    002516  NOTEBOOK    DELL    LATITUDE 3490   8G4WFV2 18389949518 -
-            // BRENDA KOSCHEL  002327  NOTEBOOK    DELL    LATITUDE 3480   4JVB3N2 9908572718  -
+            [
+                'brand_id' => Brand::where('name', 'apple')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => AMANDA CARNEIRO,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'macbook pro')->first()->id,
+                'category_id' => Category::where('name', 'notebook')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '001859',
+                'serial_number' => 'c1mnpssedty3',
+                'specifications' => null,
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
 
-            // FERNANDA BONINI 002501  NOTEBOOK    DELL    LATITUDE 3490   GTYR5V2 36640410734 -
-            // GIOVANNA GREY   002197  NOTEBOOK    DELL    LATITUDE 3450   9HXY9B2 20675991710 -
-            // ISABELA GAMA    002297  NOTEBOOK    DELL    LATITUDE 3480   FWGCSL2 34614123446 -
-            // GABRIEL CAMILO  002797  NOTEBOOK    DELL    LATITUDE 3490   BB4KSY2 24617422730 -
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => HORRANA SANTOS,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'latitude 3450')->first()->id,
+                'category_id' => Category::where('name', 'notebook')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002133',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => 'f1xm172'
+                        ],
 
-            // JOÃO LOPES  002750  NOTEBOOK    DELL    LATITUDE 3490   FCKZ9X2 33412567286 -
-            // FERNANDO NAMUR  002200  NOTEBOOK    DELL    LATITUDE 3450   9HVY9B2 20672632478 -
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '32768656526'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
 
-            // MIRIAM ELWING   002192  NOTEBOOK    DELL    LATITUDE 3450   9HVT9B2 20672399198 -
-            // LEONARDO HENRIQUE ANDRADE   002310  NOTEBOOK    DELL    LATITUDE 3470   J99Z542 41919816098 -
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => STELA MARTINS,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'latitude 3480')->first()->id,
+                'category_id' => Category::where('name', 'notebook')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002454',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => '5T0VFP2'
+                        ],
 
-            // PAULA ZOPELLO   002328  NOTEBOOK    DELL    LATITUDE 3480   4JW53N2 9909972398  -
-            // DEBORA FERREIRA 002020  NOTEBOOK    DELL    LATITUDE 3440   8HDG342 18464769218 -
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '12638897462'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
 
-            // ADRIANE VILLELA 002475  NOTEBOOK    DELL    LATITUDE 3490   D1FHYR2 28384668974 -
-            // NAYARA OLIVEIRA 002028  DESKTOP DELL    XPS F9QZ442 33241238930 -
-            // NAYARA OLIVEIRA 002122  NOTEBOOK    DELL    LATITUDE E5440  G2VGKZ1 35002291501 -
-            // BRUNO CESAR MESQUITA    002195  NOTEBOOK    DELL    LATITUDE 3450   9HWZ9B2 20674358750 -
-            // BEATRIZ YOSHITO 002018  NOTEBOOK    DELL    LATITUDE 3440   HFDG342 37934877890 -
-            // BEATRIZ YOSHITO 002494  DESKTOP APPLE   IMAC "27    -   -   C02XV5A5J1GG
-            // CARLA BONOMI    002118  DESKTOP DELL    OPTPLEX 7010    JYHFKZ1 43443994861 -
-            // CARLA BONOMI    002002  NOTEBOOK    DELL    LATITUDE 3440   1JDG342 3348225218  -
-            // ARQUIVO FOTOGRÁFICO 002029  DESKTOP DELL    XPS 49QZ442 9296633234  -
-            //     001822  DESKTOP DELL    OPTPLEX 3020    6NT7Y02 14500495586 -
-            // PESQUISADOR 001516  DESKTOP DELL    VOSTRO 200  GWLPPH1 36799906357 -
-            //     001506  DESKTOP DELL    VOSTRO 200  BS8YHH1 25652704501 -
-            // CPD 001689  DESKTOP DELL    OPTPLEX 390 2XRY9R1 6395897053  -
-            // CAROLINA SILVA  001615  DESKTOP DELL    VOSTRO 220s 12PXLL1 2341272709  -
-            // MIRNA FELIX 001628  DESKTOP DELL    VOSTRO 220s 40DNLRH1    95322836181 -
-            // ESTAGIARIO  002119  DESKTOP DELL    OPTPLEX 7010    BYHFKZ1 26029736173
-            //     002027  DESKTOP DELL    OPTPLEX 9020    2QM1542 5962690082
-            //     001618  DESKTOP DELL    VOSTRO 220s 22PXLL1 4518055045
-            // VOLUNTÁRIOS 001796  DESKTOP DELL    OPTPLEX 3010    975X6W1 20024250913
-            //     001718  DESKTOP DELL    OPTPLEX 390 25FC8S1 4681661041  -
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => YASMINE LIMA,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'latitude 3450')->first()->id,
+                'category_id' => Category::where('name', 'notebook')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002127',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => '5gqhc72'
+                        ],
 
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '11895849470'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'observações',
+                            'description' => 'problemas com a tela'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => WALDIAEL BRAZ,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'latitude 3480')->first()->id,
+                'category_id' => Category::where('name', 'notebook')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002452',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => '5T1SFP2'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '12640437110'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => JULIA CAVAZZINI,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'latitude 3480')->first()->id,
+                'category_id' => Category::where('name', 'notebook')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002422',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => 'DLKXFP2'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '29603112374'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => ERIC XAVIER,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'latitude 3480')->first()->id,
+                'category_id' => Category::where('name', 'notebook')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002439',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => 'DFKZRP2'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '29240424182'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            // Comunicacao
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => DANIELA COTRIM,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'latitude 3490')->first()->id,
+                'category_id' => Category::where('name', 'notebook')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002520',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => '8FMVFV2'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '18359669774'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => RODRIGO AVELAR,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'inspiron 7472')->first()->id,
+                'category_id' => Category::where('name', 'notebook')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002434',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => 'GPWSWQ2'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '36395268266'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => FERNANDO NETTO,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'inspiron 7472')->first()->id,
+                'category_id' => Category::where('name', 'notebook')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002126',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => '5GNQC72'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '11891230526'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'observação',
+                            'description' => 'confirmar modelo do equipamento.'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => MARIANA MARQUES,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'inspiron 3470')->first()->id,
+                'category_id' => Category::where('name', 'notebook')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '001902',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => 'H996CD2'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '37564907798'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'apple')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => GABRIELA VALDANHA,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'macbook pro')->first()->id,
+                'category_id' => Category::where('name', 'notebook')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002098',
+                'serial_number' => 'c1mp41jgdty3',
+                'specifications' => null,
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'xps')->first()->id,
+                'category_id' => Category::where('name', 'desktop')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002279',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => '7DBT2J2'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '16043368718'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'localização',
+                            'description' => 'comunicação'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            // Producao
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => MARINA MOURA,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'latitude 3470')->first()->id,
+                'category_id' => Category::where('name', 'notebook')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002312',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => 'J95HJ82'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '41912276114'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => MARINA REBOUÇAS,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'inspiron 7472')->first()->id,
+                'category_id' => Category::where('name', 'notebook')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002463',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => '4XKQ9R2'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '10737331166'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => AMANDA NEGRI ,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'vostro 5481')->first()->id,
+                'category_id' => Category::where('name', 'notebook')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002786',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => '8DM9K03'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '18237716355'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => JACQUELINE REIS,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'latitude 3440')->first()->id,
+                'category_id' => Category::where('name', 'notebook')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002017',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => '2JDG342'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '5525007554'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => FERNANDO GALLO,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'latitude 3440')->first()->id,
+                'category_id' => Category::where('name', 'notebook')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002004',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => 'JGDG342'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '42348908738'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'observação',
+                            'description' => 'problemas com bateria'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => MAICON WILLIAM FERREIRA,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'latitude 3440')->first()->id,
+                'category_id' => Category::where('name', 'notebook')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002012',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => '9FDG342'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '20520619202'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => LEONARDO RODRIGUES,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'latitude 3450')->first()->id,
+                'category_id' => Category::where('name', 'notebook')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002125',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => '5GQMC72'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '11896082750'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => STEFFÂNIA PRATA,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'latitude 3480')->first()->id,
+                'category_id' => Category::where('name', 'notebook')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002299',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => '4KTJSL2'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '9966085238'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => ADRIANA RODRIGUES,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'latitude 3480')->first()->id,
+                'category_id' => Category::where('name', 'notebook')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002194',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => '9HWS9B2'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '20674032158'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'observação',
+                            'description' => 'confirmar modelo.'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => ISABELLA MALZONE,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'latitude 3450')->first()->id,
+                'category_id' => Category::where('name', 'notebook')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002191',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => '9HXV9B2'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '20675851742'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => GIULIA PERONDI,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'latitude 3450')->first()->id,
+                'category_id' => Category::where('name', 'notebook')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002196',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => '9HXX2B'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '20675945054'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => MARIANE DALL'AGNOL,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'inspiron 7460')->first()->id,
+                'category_id' => Category::where('name', 'notebook')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002321',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => '46393N2'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '9075389870'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'apple')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => JULIANA ZIEBELL,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'macbook pro')->first()->id,
+                'category_id' => Category::where('name', 'notebook')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '003152',
+                'serial_number' => 'c02k93smd6n',
+                'specifications' => null,
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            // RI
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => CAROLINA ROSSETTI,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'latitude 3480')->first()->id,
+                'category_id' => Category::where('name', 'notebook')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002392',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => 'H4V2QK2'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '37299360242'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => JUSSARA NASCIMENTO,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'latitude 3400')->first()->id,
+                'category_id' => Category::where('name', 'notebook')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002789',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => 'DRPJSY2'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '29973671498'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => LAIS ALMEIDA,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'latitude 3490')->first()->id,
+                'category_id' => Category::where('name', 'notebook')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002516',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => '8G4WFV2'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '18389949518'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => BRENDA KOSCHEL,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'latitude 3480')->first()->id,
+                'category_id' => Category::where('name', 'notebook')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002327',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => '4JVB3N2'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '9908572718'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            // Planejamento Estrategico
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => FERNANDA BONINI,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'latitude 3490')->first()->id,
+                'category_id' => Category::where('name', 'notebook')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002501',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => 'GTYR5V2'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '36640410734'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => GIOVANNA GREY,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'latitude 3450')->first()->id,
+                'category_id' => Category::where('name', 'notebook')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002197',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => '9HXY9B2'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '20675991710'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => ISABELA GAMA,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'latitude 3480')->first()->id,
+                'category_id' => Category::where('name', 'notebook')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002297',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => 'FWGCSL2'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '34614123446'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => GABRIEL CAMILO,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'latitude 3490')->first()->id,
+                'category_id' => Category::where('name', 'notebook')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002797',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => 'BB4KSY2'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '24617422730'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            // Juridico
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => JOÃO LOPES,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'latitude 3490')->first()->id,
+                'category_id' => Category::where('name', 'notebook')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002750',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => 'FCKZ9X2'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '33412567286'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => FERNANDO NAMUR,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'latitude 3450')->first()->id,
+                'category_id' => Category::where('name', 'notebook')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002200',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => '9HVY9B2'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '20672632478'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            // Engenharia
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => MIRIAM ELWING,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'latitude 3450')->first()->id,
+                'category_id' => Category::where('name', 'notebook')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002192',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => '9HVT9B2'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '20672399198'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => LEONARDO HENRIQUE ANDRADE,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'latitude 3470')->first()->id,
+                'category_id' => Category::where('name', 'notebook')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002310',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => 'J99Z542'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '41919816098'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            // Secretariado
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => PAULA ZOPELLO,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'latitude 3480')->first()->id,
+                'category_id' => Category::where('name', 'notebook')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002328',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => '4JW53N2'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '9909972398'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => DEBORA FERREIRA,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'latitude 3440')->first()->id,
+                'category_id' => Category::where('name', 'notebook')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002020',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => '8HDG342'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '18464769218'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            // Centro Pesquisa
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => ADRIANE VILLELA,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'latitude 3490')->first()->id,
+                'category_id' => Category::where('name', 'notebook')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002475',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => 'D1FHYR2'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '28384668974'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => NAYARA OLIVEIRA,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'xps')->first()->id,
+                'category_id' => Category::where('name', 'desktop')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002028',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => 'F9QZ442'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '33241238930'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => NAYARA OLIVEIRA,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'latitude e5440')->first()->id,
+                'category_id' => Category::where('name', 'notebook')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002122',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => 'G2VGKZ1'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '35002291501'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => BRUNO CESAR MESQUITA,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'latitude 3450')->first()->id,
+                'category_id' => Category::where('name', 'notebook')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002195',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => '9HWZ9B2'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '20674358750'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => BEATRIZ YOSHITO,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'latitude 3440')->first()->id,
+                'category_id' => Category::where('name', 'notebook')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002018',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => 'HFDG342'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '37934877890'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'apple')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => BEATRIZ YOSHITO,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'imac')->first()->id,
+                'category_id' => Category::where('name', 'desktop')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002494',
+                'serial_number' => 'c02xv5a5j1gg',
+                'specifications' => null,
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => CARLA BONOMI,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'optplex 7010')->first()->id,
+                'category_id' => Category::where('name', 'desktop')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002118',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => 'JYHFKZ1'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '43443994861'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => CARLA BONOMI,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'latitude 3440')->first()->id,
+                'category_id' => Category::where('name', 'notebook')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002002',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => '1JDG342'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '3348225218'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => CAROLINA SILVA,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'vostro 220s')->first()->id,
+                'category_id' => Category::where('name', 'desktop')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '001615',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => '12PXLL1'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '2341272709'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                // 'holder_id' => MIRNA FELIX,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'vostro 220s')->first()->id,
+                'category_id' => Category::where('name', 'desktop')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '001628',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => '40DNLRH1'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '95322836181'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'xps')->first()->id,
+                'category_id' => Category::where('name', 'desktop')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002029',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => '49QZ442'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '9296633234'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'localização',
+                            'description' => 'centro de pesquisa'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'observação',
+                            'description' => 'arquivo fotográfico'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'optplex 3020')->first()->id,
+                'category_id' => Category::where('name', 'desktop')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '001822',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => '6NT7Y02'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '14500495586'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'localização',
+                            'description' => 'centro de pesquisa'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'observação',
+                            'description' => 'arquivo fotográfico'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'vostro 200')->first()->id,
+                'category_id' => Category::where('name', 'desktop')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '001516',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => 'GWLPPH1'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '36799906357'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'localização',
+                            'description' => 'centro de pesquisa'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'observação',
+                            'description' => 'pesquisador'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'vostro 200')->first()->id,
+                'category_id' => Category::where('name', 'desktop')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '001506',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => 'BS8YHH1'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '25652704501'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'localização',
+                            'description' => 'centro de pesquisa'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'observação',
+                            'description' => 'pesquisador'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'optplex 390')->first()->id,
+                'category_id' => Category::where('name', 'desktop')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '001689',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => '2XRY9R1'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '6395897053'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'localização',
+                            'description' => 'centro de pesquisa'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'observação',
+                            'description' => 'cpd'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'optplex 7010')->first()->id,
+                'category_id' => Category::where('name', 'desktop')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002119',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => 'BYHFKZ1'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '26029736173'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'localização',
+                            'description' => 'centro de pesquisa'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'observação',
+                            'description' => 'estagiário'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'optplex 9020')->first()->id,
+                'category_id' => Category::where('name', 'desktop')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002027',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => '2QM1542'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '5962690082'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'localização',
+                            'description' => 'centro de pesquisa'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'observação',
+                            'description' => 'estagiário'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'vostro 220s')->first()->id,
+                'category_id' => Category::where('name', 'desktop')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '001618',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => '22PXLL1'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '4518055045'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'localização',
+                            'description' => 'centro de pesquisa'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'observação',
+                            'description' => 'estagiário'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'optplex 3010')->first()->id,
+                'category_id' => Category::where('name', 'desktop')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '001796',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => '975X6W1'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '20024250913'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'localização',
+                            'description' => 'centro de pesquisa'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'observação',
+                            'description' => 'voluntários'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'optplex 390')->first()->id,
+                'category_id' => Category::where('name', 'desktop')->first()->id,
+                'department_id' => 8,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '001718',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => '25FC8S1'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '4681661041'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'localização',
+                            'description' => 'centro de pesquisa'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'observação',
+                            'description' => 'voluntários'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
         ]);
     }
 }
