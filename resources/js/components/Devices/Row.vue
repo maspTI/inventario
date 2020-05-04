@@ -1,5 +1,6 @@
 <template>
     <tr>
+        <td class="text-uppercase text-break" v-text="device.property_tag"></td>
         <td
             class="text-capitalize text-break"
             v-text="device.category.name"

@@ -91,6 +91,7 @@ class Device extends Model
             ->with([
                 'department', 'holder', 'brand', 'category', 'seller', 'pattern'
             ])
-            ->paginate($filters['paginate']);
+            ->orderBy('created_at', 'desc')
+            ->paginate($filters['paginate'] == 'all' ? $this->count('id') : $filters['paginate']);
     }
 }

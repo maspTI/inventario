@@ -5,9 +5,10 @@
         </div>
         <div class="col-md-12 mt-3">
             <div class="table-responsive">
-                <table class="table">
+                <table class="table table-hover">
                     <thead>
                         <tr>
+                            <th>Patrimônio</th>
                             <th>Categoria</th>
                             <th>Modelo</th>
                             <th>Marca</th>

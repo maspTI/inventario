@@ -39,6 +39,13 @@ class PatternsTableSeeder extends Seeder
 
             [
                 'brand_id' => $brand,
+                'name' => 'optplex 790',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
+
+            [
+                'brand_id' => $brand,
                 'name' => 'optplex 7010',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
@@ -275,6 +282,13 @@ class PatternsTableSeeder extends Seeder
             [
                 'brand_id' => $brand,
                 'name' => 'imac',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
+
+            [
+                'brand_id' => $brand,
+                'name' => 'mac server',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],

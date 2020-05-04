@@ -15,7 +15,7 @@
                     :users_db="{{ $users }}"
                     :brands_db="{{ $brands }}"
                     :sellers_db="{{ $sellers }}"
-                    http_verb="put"
+                    http_verb="post"
                     url="/devices"
                     message="Dispositivo cadastrado com sucesso!"
                 ></create-update-device-component>

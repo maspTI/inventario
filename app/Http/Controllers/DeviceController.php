@@ -62,8 +62,8 @@ class DeviceController extends Controller
 
         Device::Create([
             'brand_id' => request('brand')['id'],
-            'seller_id' => request('seller')['id'],
-            'holder_id' => request('holder')['id'],
+            'seller_id' => request('seller') != null ? request('seller')['id'] : null,
+            'holder_id' => request('holder') != null ? request('holder')['id'] : null,
             'pattern_id' => request('pattern')['id'],
             'category_id' => request('category')['id'],
             'ticket_number' => request('ticket_number'),
