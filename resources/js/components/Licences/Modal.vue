@@ -37,49 +37,22 @@
                                     v-text="bought_at"
                                 ></span>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-4" v-if="licence.due_date">
                                 <span
                                     class="text-capitalize text-break font-weight-bolder text-muted"
-                                    >Tipo: </span
+                                    >Data da Renovação : </span
                                 ><span
                                     class="text-capitalize text-break"
-                                    v-text="licence.category.name"
+                                    v-text="due_date"
                                 ></span>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-4" v-if="licence.value">
                                 <span
                                     class="text-capitalize text-break font-weight-bolder text-muted"
-                                    >Marca: </span
+                                    >Valor : </span
                                 ><span
                                     class="text-capitalize text-break"
-                                    v-text="licence.brand.name"
-                                ></span>
-                            </div>
-                            <div class="col-md-4">
-                                <span
-                                    class="text-capitalize text-break font-weight-bolder text-muted"
-                                    >Modelo: </span
-                                ><span
-                                    class="text-capitalize text-break"
-                                    v-text="licence.pattern.name"
-                                ></span>
-                            </div>
-                            <div class="col-md-4">
-                                <span
-                                    class="text-capitalize text-break font-weight-bolder text-muted"
-                                    >Patrimônio: </span
-                                ><span
-                                    class="text-uppercase text-break"
-                                    v-text="licence.property_tag"
-                                ></span>
-                            </div>
-                            <div class="col-md-4" v-if="licence.serial_number">
-                                <span
-                                    class="text-capitalize text-break font-weight-bolder text-muted"
-                                    >Número de Série: </span
-                                ><span
-                                    class="text-uppercase text-break"
-                                    v-text="licence.serial_number"
+                                    v-text="`R$ ${licence.value}`"
                                 ></span>
                             </div>
                             <div class="col-md-4" v-if="licence.seller">
@@ -91,27 +64,18 @@
                                     v-text="licence.seller.name"
                                 ></span>
                             </div>
-                            <div class="col-md-4" v-if="licence.ticket_number">
-                                <span
-                                    class="text-capitalize text-break font-weight-bolder text-muted"
-                                    >Nota Fiscal: </span
-                                ><span
-                                    class="text-uppercase text-break"
-                                    v-text="licence.ticket_number"
-                                ></span>
-                            </div>
                             <div
                                 class="col-md-4"
-                                v-for="spec in licence.specifications"
-                                :key="spec.id"
+                                v-for="note in licence.notes"
+                                :key="note.id"
                             >
                                 <span
                                     class="text-capitalize text-break font-weight-bolder text-muted"
-                                    v-text="`${spec.specification}: `"
+                                    v-text="`${note.specification}: `"
                                 ></span
                                 ><span
                                     class="text-uppercase text-break"
-                                    v-text="spec.description"
+                                    v-text="note.description"
                                 ></span>
                             </div>
                         </div>
@@ -132,6 +96,9 @@ export default {
     computed: {
         bought_at() {
             return window.moment(this.licence.bought_at).format("DD/MM/YYYY");
+        },
+        due_date() {
+            return window.moment(this.licence.due_date).format("DD/MM/YYYY");
         },
     },
     created() {

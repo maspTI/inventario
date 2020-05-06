@@ -13,6 +13,14 @@ class Seller extends Model
         return $this->hasMany(Device::class);
     }
 
+    /**
+     *
+     */
+    public function licences()
+    {
+        return $this->hasMany(Licence::class);
+    }
+
     public function search(array $filters = null)
     {
         if ($filters) {

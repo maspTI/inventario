@@ -34,6 +34,14 @@ class Licence extends Model
     /**
      *
      */
+    public function seller()
+    {
+        return $this->belongsTo(Seller::class);
+    }
+
+    /**
+     *
+     */
     public function getValueAttribute($value) : string
     {
         return number_format($value, 2, ',', '.');
@@ -45,7 +53,7 @@ class Licence extends Model
     public function search(array $filters = null)
     {
         if ($filters) {
-            return $this->paginate($filters['paginate']);
+            return $this->with('seller')->paginate($filters['paginate']);
         }
         return $this->all();
     }

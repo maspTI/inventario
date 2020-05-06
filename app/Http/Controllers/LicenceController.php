@@ -101,7 +101,14 @@ class LicenceController extends Controller
      */
     public function edit(Licence $licence)
     {
-        //
+        $licence = Licence::whereId($licence->id)->with('seller')->first();
+        $sellers = new Seller;
+
+        return view('licences.edit')
+            ->with([
+                'licence' => $licence,
+                'sellers' => $sellers->search()
+            ]);
     }
 
     /**
