@@ -45,11 +45,11 @@ class CategoriesTableSeeder extends Seeder
                 'updated_at' => Carbon::now(),
             ],
 
-            [
-                'name' => 'software',
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now(),
-            ],
+            // [
+            //     'name' => 'software',
+            //     'created_at' => Carbon::now(),
+            //     'updated_at' => Carbon::now(),
+            // ],
 
         ]);
     }

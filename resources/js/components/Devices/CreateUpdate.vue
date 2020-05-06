@@ -159,19 +159,6 @@
                     v-if="form.errors.has('holder')"
                 ></small>
             </div>
-            <div class="col-md-6 form-group d-flex flex-column">
-                <label>Data da Compra</label>
-                <date-picker
-                    width="100%"
-                    format="DD/MM/YYYY"
-                    v-model="form.bought_at"
-                ></date-picker>
-                <small
-                    class="text-danger"
-                    v-text="form.errors.get('bought_at')"
-                    v-if="form.errors.has('bought_at')"
-                ></small>
-            </div>
             <div class="col-md-6">
                 <div class="form-group bmd-form-group">
                     <label class="bmd-label-floating">Nota Fiscal</label>
@@ -217,6 +204,19 @@
                     ></small>
                 </div>
             </div>
+            <div class="col-md-6 form-group d-flex flex-column">
+                <label>Data da Compra</label>
+                <date-picker
+                    width="100%"
+                    format="DD/MM/YYYY"
+                    v-model="form.bought_at"
+                ></date-picker>
+                <small
+                    class="text-danger"
+                    v-text="form.errors.get('bought_at')"
+                    v-if="form.errors.has('bought_at')"
+                ></small>
+            </div>
             <div class="container-fluid mt-3">
                 <div class="row">
                     <div class="col-md-12">
@@ -226,6 +226,8 @@
                         v-for="spec in form.specifications"
                         :key="spec.id"
                         :spec="spec"
+                        label_1="Especificação"
+                        label_2="Descrição"
                     />
                     <div class="col-md-12 d-flex justify-content-start">
                         <button class="btn btn-success" @click.prevent="add">
@@ -244,7 +246,7 @@ import Multiselect from "vue-multiselect";
 import "vue-multiselect/dist/vue-multiselect.min.css";
 import DatePicker from "vue2-datepicker";
 import "vue2-datepicker/locale/pt-br";
-import SpecComponent from "./Specs";
+import SpecComponent from "../Utilities/Notes";
 export default {
     props: [
         "categories_db",
@@ -286,6 +288,23 @@ export default {
     methods: {
         send() {
             window.events.$emit("loading", true);
+            let specifications = this.form.specifications.filter((spec) => {
+                return (
+                    spec.specification.length == 0 ||
+                    spec.description.length == 0
+                );
+            });
+
+            if (specifications.length) {
+                swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text:
+                        "Complete ou remova as especificações com campos vazios.",
+                });
+                window.events.$emit("loading", false);
+                return;
+            }
             this.form[this.http_verb](this.url)
                 .then((result) => {
                     window.events.$emit("loading", false);

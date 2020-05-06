@@ -24,6 +24,9 @@ Route::resource('categories', 'CategoryController')->middleware(['auth']);
 // Devices Routes
 Route::resource('devices', 'DeviceController')->middleware(['auth']);
 
+// Licences Routes
+Route::resource('licences', 'LicenceController')->middleware(['auth']);
+
 // Patterns Routes
 Route::resource('patterns', 'PatternController')->middleware(['auth']);
 

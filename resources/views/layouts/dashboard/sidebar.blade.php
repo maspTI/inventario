@@ -19,17 +19,17 @@
                     <p>Adicionar Dispositivo</p>
                 </a>
             </li>
-            {{-- <li class="nav-item {{ url()->current() == route('categories.index') ? 'active' : '' }}">
-                <a class="nav-link" href="{{ route('categories.index') }}">
-                    <p>Categorias</p>
+            <li class="nav-item {{ url()->current() == route('licences.index') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('licences.index') }}">
+                    <p>Licenças/Softwares</p>
                 </a>
             </li>
-            <li class="nav-item {{ url()->current() == route('categories.index') ? 'active' : '' }}">
-                <a class="nav-link" href="{{ route('categories.index') }}">
-                    <p>Adicionar Categoria</p>
+            <li class="nav-item {{ url()->current() == route('licences.create') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('licences.create') }}">
+                    <p>Adicionar Licença/Software</p>
                 </a>
             </li>
-            <li class="nav-item {{ url()->current() == route('brands.index') ? 'active' : '' }}">
+            {{-- <li class="nav-item {{ url()->current() == route('brands.index') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('brands.index') }}">
                     <p>Marcas</p>
                 </a>

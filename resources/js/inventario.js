@@ -55,6 +55,20 @@ Vue.component(
     require("./components/Devices/Modal.vue").default
 );
 
+// Licences
+Vue.component(
+    "create-update-licence-component",
+    require("./components/Licences/CreateUpdate.vue").default
+);
+Vue.component(
+    "index-licence-component",
+    require("./components/Licences/Index.vue").default
+);
+Vue.component(
+    "modal-licence-component",
+    require("./components/Licences/Modal.vue").default
+);
+
 // Patterns
 Vue.component(
     "modal-create-pattern-component",
