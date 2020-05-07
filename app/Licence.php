@@ -69,12 +69,13 @@ class Licence extends Model
                 }
             })
             ->where(function ($query) use ($filters) {
-                $query->orWhereHas('seller', function ($query) use ($filters) {
-                    $query->where('name', 'LIKE', "%{$filters['search']}%")
-                        ->orWhere('cnpj', 'LIKE', "%{$filters['search']}%");
-                })
-                ->orWhereJsonContains('notes', ['description' => strtolower($filters['search'])])
-                ->orWhereJsonContains('notes', ['specification' => strtolower($filters['search'])]);
+                $query->where('name', 'LIKE', "%{$filters['search']}%")
+                    ->orWhereHas('seller', function ($query) use ($filters) {
+                        $query->where('name', 'LIKE', "%{$filters['search']}%")
+                            ->orWhere('cnpj', 'LIKE', "%{$filters['search']}%");
+                    })
+                    ->orWhereJsonContains('notes', ['description' => strtolower($filters['search'])])
+                    ->orWhereJsonContains('notes', ['specification' => strtolower($filters['search'])]);
             })
             ->with([
                 'department', 'seller'
