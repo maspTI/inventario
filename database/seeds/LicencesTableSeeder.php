@@ -25,7 +25,7 @@ class LicencesTableSeeder extends Seeder
                 'bought_at' => '2020-03-25',
                 'due_date' => '2021-03-25',
                 'status' => Carbon::now(),
-                'notes' => '',
+                'notes' => null
             ],
 
             [
@@ -38,7 +38,7 @@ class LicencesTableSeeder extends Seeder
                 'bought_at' => '2020-02-12',
                 'due_date' => '2021-02-12',
                 'status' => Carbon::now(),
-                'notes' => '',
+                'notes' => null
             ],
 
             [
@@ -51,7 +51,7 @@ class LicencesTableSeeder extends Seeder
                 'bought_at' => '2019-05-20',
                 'due_date' => '2020-05-20',
                 'status' => Carbon::now(),
-                'notes' => '',
+                'notes' => null
             ],
 
             [
@@ -64,7 +64,7 @@ class LicencesTableSeeder extends Seeder
                 'bought_at' => '2019-09-26',
                 'due_date' => '2020-09-26',
                 'status' => Carbon::now(),
-                'notes' => '',
+                'notes' => null
             ],
 
             [
@@ -77,7 +77,7 @@ class LicencesTableSeeder extends Seeder
                 'bought_at' => '2020-04-21',
                 'due_date' => '2021-04-21',
                 'status' => Carbon::now(),
-                'notes' => '',
+                'notes' => null
             ],
 
             [
@@ -90,7 +90,7 @@ class LicencesTableSeeder extends Seeder
                 'bought_at' => '2020-03-30',
                 'due_date' => '2021-03-30',
                 'status' => Carbon::now(),
-                'notes' => '',
+                'notes' => null
             ],
 
             [
@@ -103,7 +103,7 @@ class LicencesTableSeeder extends Seeder
                 'bought_at' => '2020-02-20',
                 'due_date' => '2021-02-20',
                 'status' => Carbon::now(),
-                'notes' => '',
+                'notes' => null
             ],
 
             [
@@ -116,7 +116,7 @@ class LicencesTableSeeder extends Seeder
                 'bought_at' => '2020-02-05',
                 'due_date' => '2021-02-05',
                 'status' => Carbon::now(),
-                'notes' => '',
+                'notes' => null
             ],
 
             [
@@ -129,7 +129,7 @@ class LicencesTableSeeder extends Seeder
                 'bought_at' => '2020-03-13',
                 'due_date' => '2021-03-13',
                 'status' => Carbon::now(),
-                'notes' => '',
+                'notes' => null
             ],
 
             [
@@ -142,7 +142,7 @@ class LicencesTableSeeder extends Seeder
                 'bought_at' => '2020-02-13',
                 'due_date' => '2021-02-13',
                 'status' => Carbon::now(),
-                'notes' => '',
+                'notes' => null
             ],
 
             [
@@ -155,7 +155,7 @@ class LicencesTableSeeder extends Seeder
                 'bought_at' => '2019-09-22',
                 'due_date' => '2020-09-22',
                 'status' => Carbon::now(),
-                'notes' => '',
+                'notes' => null
             ],
 
             [
@@ -168,7 +168,7 @@ class LicencesTableSeeder extends Seeder
                 'bought_at' => '2019-06-22',
                 'due_date' => '2020-06-22',
                 'status' => Carbon::now(),
-                'notes' => '',
+                'notes' => null
             ],
 
             [
@@ -181,7 +181,7 @@ class LicencesTableSeeder extends Seeder
                 'bought_at' => '2020-02-27',
                 'due_date' => '2021-02-27',
                 'status' => Carbon::now(),
-                'notes' => '',
+                'notes' => null
             ],
 
             [
@@ -194,7 +194,7 @@ class LicencesTableSeeder extends Seeder
                 'bought_at' => '2020-02-15',
                 'due_date' => '2021-02-15',
                 'status' => Carbon::now(),
-                'notes' => '',
+                'notes' => null
             ],
 
             // monthly
@@ -205,10 +205,10 @@ class LicencesTableSeeder extends Seeder
                 'description' => null,
                 'renewal_term' => 'monthly',
                 'value' => 23651.99,
-                'bought_at' => '2021-01-01',
-                'due_date' => '2021-06-01',
+                'bought_at' => '2020-01-01',
+                'due_date' => '2020-06-01',
                 'status' => Carbon::now(),
-                'notes' => '',
+                'notes' => null
             ],
 
             [
@@ -218,10 +218,10 @@ class LicencesTableSeeder extends Seeder
                 'description' => null,
                 'renewal_term' => 'monthly',
                 'value' => 8996.40,
-                'bought_at' => '2021-01-01',
-                'due_date' => '2021-06-01',
+                'bought_at' => '2020-01-01',
+                'due_date' => '2020-06-01',
                 'status' => Carbon::now(),
-                'notes' => '',
+                'notes' => null
             ],
 
             [
@@ -231,10 +231,10 @@ class LicencesTableSeeder extends Seeder
                 'description' => null,
                 'renewal_term' => 'monthly',
                 'value' => 308.00,
-                'bought_at' => '2021-01-01',
-                'due_date' => '2021-06-01',
+                'bought_at' => '2020-01-01',
+                'due_date' => '2020-06-01',
                 'status' => Carbon::now(),
-                'notes' => '',
+                'notes' => null
             ],
 
         ]);

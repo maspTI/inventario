@@ -13,25 +13,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'DashboardController@index')->name('dashboard.index')->middleware(['auth']);
+Route::get('/', 'DashboardController@index')->name('dashboard.index')->middleware(['auth', 'department']);
 
 // Brands Routes
-Route::resource('brands', 'BrandController')->middleware(['auth']);
+Route::resource('brands', 'BrandController')->middleware(['auth', 'department']);
 
 // Categories Routes
-Route::resource('categories', 'CategoryController')->middleware(['auth']);
+Route::resource('categories', 'CategoryController')->middleware(['auth', 'department']);
 
 // Devices Routes
-Route::resource('devices', 'DeviceController')->middleware(['auth']);
+Route::resource('devices', 'DeviceController')->middleware(['auth', 'department']);
 
 // Licences Routes
-Route::resource('licences', 'LicenceController')->middleware(['auth']);
+Route::resource('licences', 'LicenceController')->middleware(['auth', 'department']);
 
 // Patterns Routes
-Route::resource('patterns', 'PatternController')->middleware(['auth']);
+Route::resource('patterns', 'PatternController')->middleware(['auth', 'department']);
 
 // Sellers Routes
-Route::resource('sellers', 'SellerController')->middleware(['auth']);
+Route::resource('sellers', 'SellerController')->middleware(['auth', 'department']);
 
 Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout');

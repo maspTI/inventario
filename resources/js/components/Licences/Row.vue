@@ -2,6 +2,7 @@
     <tr>
         <td class="text-uppercase text-break" v-text="licence.name"></td>
         <td class="text-capitalize text-break" v-text="due_date"></td>
+        <td class="text-capitalize text-break" v-text="renewal_term"></td>
         <td
             class="text-capitalize text-break"
             v-text="`R$ ${licence.value}`"
@@ -61,6 +62,22 @@ export default {
             if (this.licence.renewal_term != "lifelong")
                 return moment(this.licence.due_date).format("DD/MM/YYYY");
             return "Vitalícia";
+        },
+        renewal_term() {
+            if (this.licence.renewal_term == "lifelong") return "Vitalícia";
+            else if (this.licence.renewal_term == "daily") return "Diária";
+            else if (this.licence.renewal_term == "weekly") return "Semanal";
+            else if (this.licence.renewal_term == "biweekly")
+                return "Quinzenal";
+            else if (this.licence.renewal_term == "monthly") return "Mensal";
+            else if (this.licence.renewal_term == "bimonthly")
+                return "Bimestral";
+            else if (this.licence.renewal_term == "quarterly")
+                return "Trimestral";
+            else if (this.licence.renewal_term == "semiannual")
+                return "Semestral";
+            else if (this.licence.renewal_term == "yearly") return "Anual";
+            else if (this.licence.renewal_term == "biennial") return "Bienal";
         },
     },
     methods: {

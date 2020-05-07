@@ -10,6 +10,7 @@
                         <tr>
                             <th>Nome</th>
                             <th>Vencimento</th>
+                            <th>Tipo de Renovação</th>
                             <th>Valor</th>
                             <th>Status</th>
                             <th>Ações</th>
