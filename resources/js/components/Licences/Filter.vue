@@ -56,8 +56,6 @@ export default {
                 paginate: 10,
                 search: "",
                 status: "all",
-                brand: "all",
-                category: "all",
                 seller: "all",
             },
             brands: [],
@@ -81,8 +79,6 @@ export default {
         },
     },
     created() {
-        this.fetch("brands");
-        this.fetch("categories");
         this.fetch("sellers");
     },
 };

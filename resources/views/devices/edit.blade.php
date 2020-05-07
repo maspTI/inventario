@@ -1,11 +1,11 @@
 @extends('layouts.dashboard.index')
 
-@section('title', '| Adicionar Dispositivo')
+@section('title', '| Editar Dispositivo')
 
 @section('content')
 <div class="card">
     <div class="card-header card-header-primary">
-        <h4 class="card-title ">Adicionar Dispositivo</h4>
+        <h4 class="card-title ">Editar Dispositivo</h4>
     </div>
     <div class="card-body">
         <div class="row">

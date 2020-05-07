@@ -239,6 +239,11 @@ export default {
     created() {
         if (this.licence) {
             this.form = new Form({ ...this.licence });
+            this.form.renewal_term = this.renewal_terms.find((renewal_term) => {
+                if (renewal_term.value == this.licence.renewal_term)
+                    return renewal_term;
+            });
+            this.form.bought_at = new Date(this.form.bought_at);
         }
 
         this.sellers = this.sellers_db;

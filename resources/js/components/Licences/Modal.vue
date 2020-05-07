@@ -78,6 +78,15 @@
                                     v-text="note.description"
                                 ></span>
                             </div>
+                            <div class="col-md-12" v-if="licence.description">
+                                <span
+                                    class="text-capitalize text-break font-weight-bolder text-muted"
+                                    >Descrição: </span
+                                ><span
+                                    class="text-uppercase text-break"
+                                    v-text="licence.description"
+                                ></span>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -41,7 +41,6 @@ export default {
             licences: [],
             paginate: {},
             filters: {
-                department: "all",
                 paginate: 10,
                 search: "",
                 status: "all",
@@ -59,7 +58,7 @@ export default {
             axios
                 .get(
                     url === null
-                        ? `/licences?paginate=${this.filters.paginate}&search=${this.filters.search}&status=${this.filters.status}&brand=${this.filters.brand}&category=${this.filters.category}&seller=${this.filters.seller}`
+                        ? `/licences?paginate=${this.filters.paginate}&search=${this.filters.search}&status=${this.filters.status}&seller=${this.filters.seller}`
                         : url
                 )
                 .then((result) => {
@@ -85,7 +84,7 @@ export default {
 
         window.events.$on("page", (url) => {
             this.fetch(
-                `${url}&paginate=${this.filters.paginate}&search=${this.filters.search}&status=${this.filters.status}&brand=${this.filters.brand}&category=${this.filters.category}&seller=${this.filters.seller}`
+                `${url}&paginate=${this.filters.paginate}&search=${this.filters.search}&status=${this.filters.status}&seller=${this.filters.seller}`
             );
         });
     },

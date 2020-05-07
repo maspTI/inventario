@@ -52,9 +52,24 @@ class Licence extends Model
      */
     public function search(array $filters = null)
     {
-        if ($filters) {
-            return $this->with('seller')->paginate($filters['paginate']);
-        }
-        return $this->all();
+        return $this->where('department_id', auth()->user()->department_id)
+            ->where(function ($query) {
+                if (auth()->user()->subdepartment) {
+                    return $query->where('subdepartment_id', auth()->user()->subdepartment->id);
+                }
+            })
+            ->where(function ($query) use ($filters) {
+                $query->orWhereHas('seller', function ($query) use ($filters) {
+                    $query->where('name', 'LIKE', "%{$filters['search']}%")
+                        ->orWhere('cnpj', 'LIKE', "%{$filters['search']}%");
+                })
+                ->orWhereJsonContains('notes', ['description' => strtolower($filters['search'])])
+                ->orWhereJsonContains('notes', ['specification' => strtolower($filters['search'])]);
+            })
+            ->with([
+                'department', 'seller'
+            ])
+            ->orderBy('due_date', 'asc')
+            ->paginate($filters['paginate'] == 'all' ? $this->count('id') : $filters['paginate']);
     }
 }

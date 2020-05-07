@@ -120,7 +120,31 @@ class LicenceController extends Controller
      */
     public function update(Request $request, Licence $licence)
     {
-        //
+        $this->validateRequest($request, $licence);
+
+        $carbonMethod = $this->timeInterval[
+            request('renewal_term')['value']
+        ][0];
+
+        $bought_at = new Carbon(request("bought_at"));
+
+        $licence->update([
+            'name' => request("name"),
+            'notes' => request("notes"),
+            'value' => request("value"),
+            'bought_at' => new Carbon(request("bought_at")),
+            'seller_id' => request('seller') != null ? request('seller')['id'] : null,
+            'description' => request("description"),
+            'renewal_term' => request("renewal_term")['value'],
+            'due_date' => $bought_at->$carbonMethod(
+                $this->timeInterval[
+                    request("renewal_term")['value']
+                ][1]
+            ),
+            'status' => Carbon::now(),
+            'department_id' => auth()->user()->department_id,
+            'subdepartment_id' => auth()->user()->subdepartment != null ? auth()->user()->subdepartment->id : null
+        ]);
     }
 
     /**
