@@ -58,7 +58,9 @@ export default {
     },
     computed: {
         due_date() {
-            return moment(this.licence.due_date).format("DD/MM/YYYY");
+            if (this.licence.renewal_term != "lifelong")
+                return moment(this.licence.due_date).format("DD/MM/YYYY");
+            return "Vitalícia";
         },
     },
     methods: {

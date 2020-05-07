@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -45,6 +46,15 @@ class Licence extends Model
     public function getValueAttribute($value) : string
     {
         return number_format($value, 2, ',', '.');
+    }
+
+    public function changeStatus()
+    {
+        $this->update([
+            'status' =>  $this->status != null ? null : Carbon::now(),
+        ]);
+
+        return $this;
     }
 
     /**

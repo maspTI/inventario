@@ -71,11 +71,11 @@ class LicenceController extends Controller
             'seller_id' => request('seller') != null ? request('seller')['id'] : null,
             'description' => request("description"),
             'renewal_term' => request("renewal_term")['value'],
-            'due_date' => $bought_at->$carbonMethod(
+            'due_date' => request("renewal_term")['value'] != 'lifelong' ? $bought_at->$carbonMethod(
                 $this->timeInterval[
                     request("renewal_term")['value']
                 ][1]
-            ),
+            ) : null,
             'status' => Carbon::now(),
             'department_id' => auth()->user()->department_id,
             'subdepartment_id' => auth()->user()->subdepartment != null ? auth()->user()->subdepartment->id : null
@@ -120,6 +120,11 @@ class LicenceController extends Controller
      */
     public function update(Request $request, Licence $licence)
     {
+        if (request()->has('change_status')) {
+            $licence = Licence::whereId($licence->id)->first();
+            return $licence->changeStatus()->fresh();
+        }
+
         $this->validateRequest($request, $licence);
 
         $carbonMethod = $this->timeInterval[
@@ -136,11 +141,11 @@ class LicenceController extends Controller
             'seller_id' => request('seller') != null ? request('seller')['id'] : null,
             'description' => request("description"),
             'renewal_term' => request("renewal_term")['value'],
-            'due_date' => $bought_at->$carbonMethod(
+            'due_date' => request("renewal_term")['value'] != 'lifelong' ? $bought_at->$carbonMethod(
                 $this->timeInterval[
                     request("renewal_term")['value']
                 ][1]
-            ),
+            ) : null,
             'status' => Carbon::now(),
             'department_id' => auth()->user()->department_id,
             'subdepartment_id' => auth()->user()->subdepartment != null ? auth()->user()->subdepartment->id : null

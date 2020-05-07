@@ -165,7 +165,7 @@ export default {
             }),
             sellers: [],
             renewal_terms: [
-                { name: "Vitalício", value: "" },
+                { name: "Vitalício", value: "lifelong" },
                 { name: "Diário", value: "daily" },
                 { name: "Semanal", value: "weekly" },
                 { name: "Quinzenal", value: "biweekly" },
