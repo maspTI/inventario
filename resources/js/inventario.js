@@ -18,6 +18,8 @@ window.swal = require("sweetalert2");
 
 window.moment = require("moment");
 
+window.Chart = require("chart.js");
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -83,6 +85,10 @@ Vue.component(
 
 // Utilities
 Vue.component("flash", require("./components/Utilities/Flash.vue").default);
+Vue.component(
+    "chart-pie",
+    require("./components/Utilities/ChartPie.vue").default
+);
 Vue.component(
     "submit-button",
     require("./components/Utilities/SubmitButton.vue").default

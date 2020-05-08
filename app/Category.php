@@ -20,4 +20,14 @@ class Category extends Model
         }
         return $this->all();
     }
+
+    /**
+     *
+     */
+    public function countDevices()
+    {
+        return $this->devices()
+            ->where('department_id', auth()->user()->department_id)
+            ->count('id');
+    }
 }

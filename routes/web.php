@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'DashboardController@index')->name('dashboard.index')->middleware(['auth', 'department']);
+Route::get('/charts/computers', 'DashboardController@computers')->name('dashboard.computers')->middleware(['auth', 'department']);
+Route::get('/charts/patterns', 'DashboardController@patterns')->name('dashboard.patterns')->middleware(['auth', 'department']);
 
 // Brands Routes
 Route::resource('brands', 'BrandController')->middleware(['auth', 'department']);

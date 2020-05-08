@@ -19,6 +19,16 @@ class Pattern extends Model
         return $this->hasMany(Device::class);
     }
 
+    /**
+     *
+     */
+    public function countDevices()
+    {
+        return $this->devices()
+            ->where('department_id', auth()->user()->department_id)
+            ->count('id');
+    }
+
     public function search(array $filters) : Collection
     {
         if (count($filters) > 1) {
