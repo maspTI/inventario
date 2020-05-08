@@ -14,11 +14,18 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-6">
                 <chart-pie
                     id="{{ Str::random(20) }}"
                     url="/charts/computers"
                     title="Tipos de Computadores"
+                ></chart-pie>
+            </div>
+            <div class="col-md-6">
+                <chart-pie
+                    id="{{ Str::random(20) }}"
+                    url="/charts/computers-by-brand"
+                    title="Quantidade de computadores por Marca"
                 ></chart-pie>
             </div>
             <div class="col-md-12 mt-2">

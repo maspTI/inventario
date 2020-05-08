@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Menu;
+use App\Brand;
 use App\Pattern;
 use App\Category;
 use Carbon\Carbon;
@@ -36,6 +37,19 @@ class DashboardController extends Controller
 
         return $patterns->map(function ($pattern) {
             return [$pattern->name => $pattern->countDevices()];
+        });
+    }
+
+    /**
+     *
+     */
+    public function computersByBrand()
+    {
+        $brands = new Brand;
+        $brands = $brands->computerBrands();
+
+        return $brands->map(function ($brand) {
+            return [$brand->name => $brand->countDevices()];
         });
     }
 }
