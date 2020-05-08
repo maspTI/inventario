@@ -37,8 +37,7 @@ class Brand extends Model
             $query->whereHas('devices', function ($query) {
                 $query->whereIn('category_id', [1, 2, 3]);
             });
-        })
-        ->orderBy('name')->get();
+        })->orderBy('name')->get();
     }
 
     public function search(array $filters = null)

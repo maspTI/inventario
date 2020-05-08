@@ -29,6 +29,18 @@ class Pattern extends Model
             ->count('id');
     }
 
+    /**
+     *
+     */
+    public function computerPatterns()
+    {
+        return $this->where(function ($query) {
+            $query->whereHas('devices', function ($query) {
+                $query->whereIn('category_id', [1, 2, 3]);
+            });
+        })->orderBy('name')->get();
+    }
+
     public function search(array $filters) : Collection
     {
         if (count($filters) > 1) {

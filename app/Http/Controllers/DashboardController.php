@@ -33,7 +33,8 @@ class DashboardController extends Controller
      */
     public function patterns()
     {
-        $patterns = Pattern::whereIn('brand_id', [1, 2])->whereHas('devices')->orderBy('name')->get();
+        $patterns = new Pattern;
+        $patterns = $patterns->computerPatterns();
 
         return $patterns->map(function ($pattern) {
             return [$pattern->name => $pattern->countDevices()];
