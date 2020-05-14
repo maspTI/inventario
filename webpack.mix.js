@@ -11,7 +11,6 @@ const mix = require("laravel-mix");
  |
  */
 
-mix.js("resources/js/inventario.js", "public/js").sass(
-    "resources/sass/inventario.scss",
-    "public/css"
-);
+mix.js("resources/js/inventario.js", "public/js")
+    .sass("resources/sass/inventario.scss", "public/css")
+    .sass("resources/sass/term.scss", "public/css");

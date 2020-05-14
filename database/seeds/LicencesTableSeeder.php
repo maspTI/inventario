@@ -16,7 +16,7 @@ class LicencesTableSeeder extends Seeder
         Licence::insert([
             // yearly
             [
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'name' => 'SophiA',
                 'description' => null,
@@ -29,7 +29,7 @@ class LicencesTableSeeder extends Seeder
             ],
 
             [
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'name' => 'inArte e inWeb',
                 'description' => null,
@@ -42,7 +42,7 @@ class LicencesTableSeeder extends Seeder
             ],
 
             [
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'name' => 'Grammarly',
                 'description' => 'São 4 licenças',
@@ -55,7 +55,7 @@ class LicencesTableSeeder extends Seeder
             ],
 
             [
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'name' => 'Articheck',
                 'description' => 'Podemos fazer um downgrade ou negociarmos com o fornecedor',
@@ -68,7 +68,7 @@ class LicencesTableSeeder extends Seeder
             ],
 
             [
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'name' => 'eClimateNotebook',
                 'description' => 'São 20 usuários no tipo de licenciamento adiquirido',
@@ -81,7 +81,7 @@ class LicencesTableSeeder extends Seeder
             ],
 
             [
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'name' => 'Adobe',
                 'description' => 'Foram adiquiridas 25 licenças no valor ~R$ 1950',
@@ -94,7 +94,7 @@ class LicencesTableSeeder extends Seeder
             ],
 
             [
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'name' => 'Autodesk',
                 'description' => 'Contrato número #110002988428',
@@ -107,7 +107,7 @@ class LicencesTableSeeder extends Seeder
             ],
 
             [
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'name' => 'Autodesk',
                 'description' => 'Contrato número #110002971151',
@@ -120,7 +120,7 @@ class LicencesTableSeeder extends Seeder
             ],
 
             [
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'name' => 'Autodesk',
                 'description' => 'Contrato número #110001590529',
@@ -133,7 +133,7 @@ class LicencesTableSeeder extends Seeder
             ],
 
             [
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'name' => 'Autodesk',
                 'description' => 'Contrato número #110002495654, contrato possui 2 licenças',
@@ -146,7 +146,7 @@ class LicencesTableSeeder extends Seeder
             ],
 
             [
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'name' => 'GSuite',
                 'description' => 'Valor relativo ao número de licenças(gmail, etc) contratadas. Cada por R$45,90',
@@ -159,7 +159,7 @@ class LicencesTableSeeder extends Seeder
             ],
 
             [
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'name' => 'GSuite',
                 'description' => 'Renovação do backup em cloud',
@@ -172,7 +172,7 @@ class LicencesTableSeeder extends Seeder
             ],
 
             [
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'name' => 'Sketchup',
                 'description' => '2 licenças para renovar, Juliana Ziebel e Izabela Malzone',
@@ -185,7 +185,7 @@ class LicencesTableSeeder extends Seeder
             ],
 
             [
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'name' => 'Sketchup',
                 'description' => '1 licença para renovar, seria da Giulia',
@@ -199,7 +199,7 @@ class LicencesTableSeeder extends Seeder
 
             // monthly
             [
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'name' => 'Protheus',
                 'description' => null,
@@ -212,7 +212,7 @@ class LicencesTableSeeder extends Seeder
             ],
 
             [
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'name' => 'Gsuite',
                 'description' => null,
@@ -225,7 +225,7 @@ class LicencesTableSeeder extends Seeder
             ],
 
             [
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'name' => 'SiTef',
                 'description' => null,

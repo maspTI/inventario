@@ -19,417 +19,15 @@ class DevicesTableSeeder extends Seeder
     public function run()
     {
         Device::insert([
-            // TI
-            [
-                'brand_id' => Brand::where('name', 'dell')->first()->id,
-                'seller_id' => null,
-                'holder_id' => null,
-                'pattern_id' => Pattern::where('name', 't420')->first()->id,
-                'category_id' => Category::where('name', 'servidor')->first()->id,
-                'department_id' => 8,
-                'subdepartment_id' => 7,
-                'ticket_number' => null,
-                'bought_at' => null,
-                'property_tag' => '001832',
-                'serial_number' => null,
-                'specifications' => strtolower(
-                    json_encode([
-                        [
-                            'id' => Str::random(20),
-                            'specification' => 'Service TAG',
-                            'description' => '8ctby02'
-                        ],
-
-                        [
-                            'id' => Str::random(20),
-                            'specification' => 'Express TAG',
-                            'description' => '18189118946'
-                        ],
-                    ])
-                ),
-                'status' => Carbon::now(),
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now()
-            ],
-
-            [
-                'brand_id' => Brand::where('name', 'dell')->first()->id,
-                'seller_id' => null,
-                'holder_id' => null,
-                'pattern_id' => Pattern::where('name', 't430')->first()->id,
-                'category_id' => Category::where('name', 'servidor')->first()->id,
-                'department_id' => 8,
-                'subdepartment_id' => 7,
-                'ticket_number' => null,
-                'bought_at' => null,
-                'property_tag' => '002211',
-                'serial_number' => null,
-                'specifications' => strtolower(
-                    json_encode([
-                        [
-                            'id' => Str::random(20),
-                            'specification' => 'Service TAG',
-                            'description' => 'g9lq172'
-                        ],
-
-                        [
-                            'id' => Str::random(20),
-                            'specification' => 'Express TAG',
-                            'description' => '35409199502'
-                        ],
-                    ])
-                ),
-                'status' => Carbon::now(),
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now()
-            ],
-
-            [
-                'brand_id' => Brand::where('name', 'dell')->first()->id,
-                'seller_id' => null,
-                'holder_id' => null,
-                'pattern_id' => Pattern::where('name', 't300')->first()->id,
-                'category_id' => Category::where('name', 'servidor')->first()->id,
-                'department_id' => 8,
-                'subdepartment_id' => 7,
-                'ticket_number' => null,
-                'bought_at' => null,
-                'property_tag' => '001534',
-                'serial_number' => null,
-                'specifications' => strtolower(
-                    json_encode([
-                        [
-                            'id' => Str::random(20),
-                            'specification' => 'Service TAG',
-                            'description' => '1wppph1'
-                        ],
-
-                        [
-                            'id' => Str::random(20),
-                            'specification' => 'Express TAG',
-                            'description' => '4154889781'
-                        ],
-                    ])
-                ),
-                'status' => Carbon::now(),
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now()
-            ],
-
-            [
-                'brand_id' => Brand::where('name', 'dell')->first()->id,
-                'seller_id' => null,
-                'holder_id' => null,
-                'pattern_id' => Pattern::where('name', 't320')->first()->id,
-                'category_id' => Category::where('name', 'servidor')->first()->id,
-                'department_id' => 8,
-                'subdepartment_id' => 7,
-                'ticket_number' => null,
-                'bought_at' => null,
-                'property_tag' => '002123',
-                'serial_number' => null,
-                'specifications' => strtolower(
-                    json_encode([
-                        [
-                            'id' => Str::random(20),
-                            'specification' => 'Service TAG',
-                            'description' => '222hkz1'
-                        ],
-
-                        [
-                            'id' => Str::random(20),
-                            'specification' => 'Express TAG',
-                            'description' => '4478676589'
-                        ],
-                    ])
-                ),
-                'status' => Carbon::now(),
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now()
-            ],
-
-            [
-                'brand_id' => Brand::where('name', 'dell')->first()->id,
-                'seller_id' => null,
-                'holder_id' => null,
-                'pattern_id' => Pattern::where('name', 'nx430')->first()->id,
-                'category_id' => Category::where('name', 'servidor')->first()->id,
-                'department_id' => 8,
-                'subdepartment_id' => 7,
-                'ticket_number' => null,
-                'bought_at' => null,
-                'property_tag' => '002447',
-                'serial_number' => null,
-                'specifications' => strtolower(
-                    json_encode([
-                        [
-                            'id' => Str::random(20),
-                            'specification' => 'Service TAG',
-                            'description' => '6zzsmn2'
-                        ],
-
-                        [
-                            'id' => Str::random(20),
-                            'specification' => 'Express TAG',
-                            'description' => '15237132446'
-                        ],
-
-                        [
-                            'id' => Str::random(20),
-                            'specification' => 'observação',
-                            'description' => 'storage de imagens'
-                        ],
-                    ])
-                ),
-                'status' => Carbon::now(),
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now()
-            ],
-
-            [
-                'brand_id' => Brand::where('name', 'dell')->first()->id,
-                'seller_id' => null,
-                'holder_id' => null,
-                'pattern_id' => Pattern::where('name', 'inspiron 530')->first()->id,
-                'category_id' => Category::where('name', 'desktop')->first()->id,
-                'department_id' => 8,
-                'subdepartment_id' => 7,
-                'ticket_number' => null,
-                'bought_at' => null,
-                'property_tag' => '000047',
-                'serial_number' => null,
-                'specifications' => strtolower(
-                    json_encode([
-                        [
-                            'id' => Str::random(20),
-                            'specification' => 'Service TAG',
-                            'description' => '2m921g1'
-                        ],
-
-                        [
-                            'id' => Str::random(20),
-                            'specification' => 'Express TAG',
-                            'description' => '5699032273'
-                        ],
-                    ])
-                ),
-                'status' => Carbon::now(),
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now()
-            ],
-
-            [
-                'brand_id' => Brand::where('name', 'dell')->first()->id,
-                'seller_id' => null,
-                'holder_id' => null,
-                'pattern_id' => Pattern::where('name', 'inspiron 530')->first()->id,
-                'category_id' => Category::where('name', 'desktop')->first()->id,
-                'department_id' => 8,
-                'subdepartment_id' => 7,
-                'ticket_number' => null,
-                'bought_at' => null,
-                'property_tag' => '001847',
-                'serial_number' => null,
-                'specifications' => strtolower(
-                    json_encode([
-                        [
-                            'id' => Str::random(20),
-                            'specification' => 'Service TAG',
-                            'description' => '6vtbbj1'
-                        ],
-
-                        [
-                            'id' => Str::random(20),
-                            'specification' => 'Express TAG',
-                            'description' => '14984376013'
-                        ],
-
-                        [
-                            'id' => Str::random(20),
-                            'specification' => 'observação',
-                            'description' => 'antigo servidor pfsense'
-                        ],
-                    ])
-                ),
-                'status' => Carbon::now(),
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now()
-            ],
-
-            [
-                'brand_id' => Brand::where('name', 'dell')->first()->id,
-                'seller_id' => null,
-                'holder_id' => null,
-                'pattern_id' => Pattern::where('name', 'optplex 390')->first()->id,
-                'category_id' => Category::where('name', 'desktop')->first()->id,
-                'department_id' => 8,
-                'subdepartment_id' => 7,
-                'ticket_number' => null,
-                'bought_at' => null,
-                'property_tag' => '001690',
-                'serial_number' => null,
-                'specifications' => strtolower(
-                    json_encode([
-                        [
-                            'id' => Str::random(20),
-                            'specification' => 'Service TAG',
-                            'description' => '3xry9r1'
-                        ],
-
-                        [
-                            'id' => Str::random(20),
-                            'specification' => 'Express TAG',
-                            'description' => '8572679389'
-                        ],
-
-                        [
-                            'id' => Str::random(20),
-                            'specification' => 'observação',
-                            'description' => 'antigo servidor masp wifi'
-                        ],
-                    ])
-                ),
-                'status' => Carbon::now(),
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now()
-            ],
-
-            [
-                'brand_id' => Brand::where('name', 'dell')->first()->id,
-                'seller_id' => null,
-                'holder_id' => null,
-                'pattern_id' => Pattern::where('name', 'optplex 7050')->first()->id,
-                'category_id' => Category::where('name', 'desktop')->first()->id,
-                'department_id' => 8,
-                'subdepartment_id' => 7,
-                'ticket_number' => null,
-                'bought_at' => null,
-                'property_tag' => '002357',
-                'serial_number' => null,
-                'specifications' => strtolower(
-                    json_encode([
-                        [
-                            'id' => Str::random(20),
-                            'specification' => 'Service TAG',
-                            'description' => '6prq0l2'
-                        ],
-
-                        [
-                            'id' => Str::random(20),
-                            'specification' => 'Express TAG',
-                            'description' => '14618911862'
-                        ],
-                    ])
-                ),
-                'status' => Carbon::now(),
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now()
-            ],
-
-            [
-                'brand_id' => Brand::where('name', 'dell')->first()->id,
-                'seller_id' => null,
-                'holder_id' => null,
-                'pattern_id' => Pattern::where('name', 'optplex 990')->first()->id,
-                'category_id' => Category::where('name', 'desktop')->first()->id,
-                'department_id' => 8,
-                'subdepartment_id' => 7,
-                'ticket_number' => null,
-                'bought_at' => null,
-                'property_tag' => '002222',
-                'serial_number' => null,
-                'specifications' => strtolower(
-                    json_encode([
-                        [
-                            'id' => Str::random(20),
-                            'specification' => 'Service TAG',
-                            'description' => 'dn2c0r1'
-                        ],
-
-                        [
-                            'id' => Str::random(20),
-                            'specification' => 'Express TAG',
-                            'description' => '29692812493'
-                        ],
-                    ])
-                ),
-                'status' => Carbon::now(),
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now()
-            ],
-
-            [
-                'brand_id' => Brand::where('name', 'dell')->first()->id,
-                'seller_id' => null,
-                'holder_id' => null,
-                'pattern_id' => Pattern::where('name', 'optplex 990')->first()->id,
-                'category_id' => Category::where('name', 'desktop')->first()->id,
-                'department_id' => 8,
-                'subdepartment_id' => 7,
-                'ticket_number' => null,
-                'bought_at' => null,
-                'property_tag' => '002220',
-                'serial_number' => null,
-                'specifications' => strtolower(
-                    json_encode([
-                        [
-                            'id' => Str::random(20),
-                            'specification' => 'Service TAG',
-                            'description' => '4czyms1'
-                        ],
-
-                        [
-                            'id' => Str::random(20),
-                            'specification' => 'Express TAG',
-                            'description' => '9493125841'
-                        ],
-                    ])
-                ),
-                'status' => Carbon::now(),
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now()
-            ],
-
-            [
-                'brand_id' => Brand::where('name', 'dell')->first()->id,
-                'seller_id' => null,
-                'holder_id' => null,
-                'pattern_id' => Pattern::where('name', 'inspiron 7560')->first()->id,
-                'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
-                'subdepartment_id' => 7,
-                'ticket_number' => null,
-                'bought_at' => null,
-                'property_tag' => '002295',
-                'serial_number' => null,
-                'specifications' => strtolower(
-                    json_encode([
-                        [
-                            'id' => Str::random(20),
-                            'specification' => 'Service TAG',
-                            'description' => 'gw2jsl2'
-                        ],
-
-                        [
-                            'id' => Str::random(20),
-                            'specification' => 'Express TAG',
-                            'description' => '36767717750'
-                        ],
-                    ])
-                ),
-                'status' => Carbon::now(),
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now()
-            ],
 
             // Facilities
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                'holder_id' => User::whereId(1)->first()->id,
+                'holder_id' => User::where('name', 'Gabriel Fonseca')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3490')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -482,11 +80,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => Vitor Machado,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Vitor Machado Fernandes')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3490')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -539,11 +136,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => Valdir Ferreira,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Valdir Ferreira')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 7400')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -572,11 +168,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => Marcelo Santos,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Marcelo Santos')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3490')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -605,11 +200,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => Juliana Prado,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Juliana Prado')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3470')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -638,11 +232,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => Wilson Marcelino,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Wilson Marcelino')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3480')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -671,11 +264,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => Keila Klei,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Keila Clei Ribeiro da Silva')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3490')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -707,7 +299,7 @@ class DevicesTableSeeder extends Seeder
                 'holder_id' => null,
                 'pattern_id' => Pattern::where('name', 'vostro 200')->first()->id,
                 'category_id' => Category::where('name', 'desktop')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -745,7 +337,7 @@ class DevicesTableSeeder extends Seeder
                 'holder_id' => null,
                 'pattern_id' => Pattern::where('name', 'vostro 200')->first()->id,
                 'category_id' => Category::where('name', 'desktop')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -781,11 +373,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => Fabio Frayha,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Fabio Frayha')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3400')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -820,11 +411,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'apple')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => Fabio Frayha,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Fabio Frayha')->first()->id,
                 'pattern_id' => Pattern::where('name', 'macbook pro')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -839,11 +429,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'apple')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => Adriano Pedrosa,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Adriano Pedrosa')->first()->id,
                 'pattern_id' => Pattern::where('name', 'imac')->first()->id,
                 'category_id' => Category::where('name', 'desktop')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -859,11 +448,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => Alexsandro Silva,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Alexsandro Silva')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3490')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -892,11 +480,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => Alailson Melo,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Alailson Melo')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3470')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -925,11 +512,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => Camila Gomes,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Camila Gomes')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3440')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -958,11 +544,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => Caique Fernandes,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Caique Fernandes')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3450')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -1000,7 +585,7 @@ class DevicesTableSeeder extends Seeder
                 'holder_id' => null,
                 'pattern_id' => Pattern::where('name', 'inspiron 3268')->first()->id,
                 'category_id' => Category::where('name', 'desktop')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -1038,7 +623,7 @@ class DevicesTableSeeder extends Seeder
                 'holder_id' => null,
                 'pattern_id' => Pattern::where('name', 'inspiron 3268')->first()->id,
                 'category_id' => Category::where('name', 'desktop')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -1076,7 +661,7 @@ class DevicesTableSeeder extends Seeder
                 'holder_id' => null,
                 'pattern_id' => Pattern::where('name', 'optplex 790')->first()->id,
                 'category_id' => Category::where('name', 'desktop')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -1112,11 +697,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => Karina Del Papa,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Karina Del Papa')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3480')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -1145,11 +729,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => vinicius flauaus,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Vinicius Flauaus')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3480')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -1178,11 +761,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => elis fabro,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Elis Fabro')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3450')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -1211,11 +793,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => larissa miranda,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Larissa Miranda Silva')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3490')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -1247,7 +828,7 @@ class DevicesTableSeeder extends Seeder
                 'holder_id' => null,
                 'pattern_id' => Pattern::where('name', 'latitude 3480')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -1282,11 +863,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => Aline Lima,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Aline Lima')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3440')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -1316,11 +896,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => Renata Toledo,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Renata Toledo')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3490')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -1349,11 +928,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => Paulo Silva,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Paulo Silva')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3480')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -1382,11 +960,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => KATIA GOMES,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Katia Valeria Gomes Ferreira')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3470')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -1418,7 +995,7 @@ class DevicesTableSeeder extends Seeder
                 'holder_id' => null,
                 'pattern_id' => Pattern::where('name', 'optplex 390')->first()->id,
                 'category_id' => Category::where('name', 'desktop')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -1454,11 +1031,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => MARINA SGNOTTO,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Marina Sgnotto')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3490')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -1487,11 +1063,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => CASSIANI AGUIAR,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Cassiani Santos Aguiar')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3440')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -1520,11 +1095,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => PAULO MAFRA,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Paulo Cesar Mafra de Matos')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3440')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -1553,11 +1127,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => TANIA SOUZA,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Tania Souza')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3440')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -1586,11 +1159,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => FABIANA SOARES,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Fabiana Soares')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3440')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -1619,11 +1191,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => ANA PAULA MOREIRA,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Ana Paula Moreira')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3400')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -1653,11 +1224,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => MARY MATSUMURA,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Mary Matsumura')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3400')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -1686,11 +1256,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => GABRIEL BREJEIRO,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Gabriel Brejeiro')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3440')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -1719,11 +1288,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => MARIA LÚCIA DE OLIVEIRA,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Maria Lucia de Oliveira Souza')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3440')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -1752,11 +1320,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => MARTA NUNES,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Marta Nunes')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3450')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -1785,11 +1352,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => FRANCISCO RODRIGUES,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Francisco Rodrigues de Sousa')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3440')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -1818,11 +1384,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => REINALDO MENEZES,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Reinaldo Menezes')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3440')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -1852,11 +1417,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => SOFIA HENNEN,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Sofia Hennen')->first()->id,
                 'pattern_id' => Pattern::where('name', 'inspiron 7560')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -1885,11 +1449,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => ERICK SANTOS,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Erick Santos')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3490')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -1918,11 +1481,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => ALINE ASSUMPÇÃO,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Aline Assumpção')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3470')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -1954,7 +1516,7 @@ class DevicesTableSeeder extends Seeder
                 'holder_id' => null,
                 'pattern_id' => Pattern::where('name', 'mac server')->first()->id,
                 'category_id' => Category::where('name', 'servidor')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -1978,11 +1540,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => CECÍLIA WINTER,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Cecilia Winter')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3490')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -2011,11 +1572,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => NALU MARIA,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Nalu Maria')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3490')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -2044,11 +1604,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => PAULA COELHO,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Paula Coelho Magalhães de Lima')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3480')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -2077,11 +1636,11 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => FELIPE LUCENA,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Felipe Lucena')->first()->id,
+                'holder_id' => User::where('name', 'Felipe Lucena')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3470')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -2110,11 +1669,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => BIANCA SAIJO,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Bianca Saijo')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3480')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -2146,7 +1704,7 @@ class DevicesTableSeeder extends Seeder
                 'holder_id' => null,
                 'pattern_id' => Pattern::where('name', 'optplex 390')->first()->id,
                 'category_id' => Category::where('name', 'desktop')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -2182,11 +1740,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'apple')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => Tomas Toledo,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Tomás Toledo')->first()->id,
                 'pattern_id' => Pattern::where('name', 'macbook air')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -2201,11 +1758,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'apple')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => ISABELLA RJEILLE,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Isabella Rjeille Cordeiro')->first()->id,
                 'pattern_id' => Pattern::where('name', 'macbook air')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -2220,11 +1776,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'apple')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => FERNANDO OLIVA,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Fernando Oliva')->first()->id,
                 'pattern_id' => Pattern::where('name', 'macbook pro')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -2239,11 +1794,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'apple')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => LAURA CONSENDEY,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Laura Consendey')->first()->id,
                 'pattern_id' => Pattern::where('name', 'macbook pro')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -2258,11 +1812,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'apple')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => GUILHERME GIUFRUDA,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Guilherme Perez Giufrida')->first()->id,
                 'pattern_id' => Pattern::where('name', 'macbook pro')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -2277,11 +1830,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'apple')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => OLIVIA ARDUI,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Olivia Cecilia Manuel Ardui')->first()->id,
                 'pattern_id' => Pattern::where('name', 'macbook pro')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -2296,11 +1848,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => GABRIELA GOTODA,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Gabriela Gotoda')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3480')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -2329,11 +1880,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => MATHEUS COSTA,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Matheus Araujo Andrade Costa')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3440')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -2362,11 +1912,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => ANA PELLEGRINI,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Ana Carolina Pais Pellegrini')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3440')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -2395,11 +1944,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => MAYARA SANTOS,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Mayara Santos')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3450')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -2428,11 +1976,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => LEONARDO ANTIQUEIRA,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Leonardo Antiqueira')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3440')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -2462,11 +2009,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => MARIANA TREVAS,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Mariana Trevas')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3480')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -2495,11 +2041,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => BRUNO GOMES,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Bruno Gomes Rodrigues')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3450')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -2529,11 +2074,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'apple')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => Paula Tinoco,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Paula Tinoco')->first()->id,
                 'pattern_id' => Pattern::where('name', 'imac')->first()->id,
                 'category_id' => Category::where('name', 'desktop')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -2548,11 +2092,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'apple')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => CLAU LIMA,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Clau Lima')->first()->id,
                 'pattern_id' => Pattern::where('name', 'imac')->first()->id,
                 'category_id' => Category::where('name', 'desktop')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -2567,11 +2110,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'apple')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => BARBARA CATTA,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Barbara Catta Preta Lima')->first()->id,
                 'pattern_id' => Pattern::where('name', 'imac')->first()->id,
                 'category_id' => Category::where('name', 'desktop')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -2586,11 +2128,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'apple')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => GUILHERME PACOLA,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Guilherme Pacola')->first()->id,
                 'pattern_id' => Pattern::where('name', 'imac')->first()->id,
                 'category_id' => Category::where('name', 'desktop')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -2606,11 +2147,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'apple')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => ANDRÉ MESQUITA,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'André Mesquita')->first()->id,
                 'pattern_id' => Pattern::where('name', 'macbook pro')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -2625,11 +2165,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'apple')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => AMANDA CARNEIRO,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Amanda Carneiro')->first()->id,
                 'pattern_id' => Pattern::where('name', 'macbook pro')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -2644,11 +2183,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => HORRANA SANTOS,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Horrana Santos')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3450')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -2677,11 +2215,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => STELA MARTINS,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Stela Martins')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3480')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -2710,11 +2247,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => YASMINE LIMA,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Yasmine Lima')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3450')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -2749,11 +2285,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => WALDIAEL BRAZ,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Waldiael Genival Braz da Silva')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3480')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -2782,11 +2317,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => JULIA CAVAZZINI,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Julia Cavazzini')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3480')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -2815,11 +2349,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => ERIC XAVIER,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Eric Augusto Xavier da Silva')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3480')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -2849,11 +2382,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => DANIELA COTRIM,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Daniela Cotrim')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3490')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -2882,11 +2414,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => RODRIGO AVELAR,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Rodrigo Vilano Avelar')->first()->id,
                 'pattern_id' => Pattern::where('name', 'inspiron 7472')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -2915,11 +2446,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => FERNANDO NETTO,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Fernando Netto')->first()->id,
                 'pattern_id' => Pattern::where('name', 'inspiron 7472')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -2954,11 +2484,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => MARIANA MARQUES,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Mariana Marques')->first()->id,
                 'pattern_id' => Pattern::where('name', 'inspiron 3470')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -2987,11 +2516,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'apple')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => GABRIELA VALDANHA,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Gabriela Valdanha de Araujo')->first()->id,
                 'pattern_id' => Pattern::where('name', 'macbook pro')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -3009,7 +2537,7 @@ class DevicesTableSeeder extends Seeder
                 'holder_id' => null,
                 'pattern_id' => Pattern::where('name', 'xps')->first()->id,
                 'category_id' => Category::where('name', 'desktop')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -3045,11 +2573,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => MARINA MOURA,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Marina de Moura Almeida')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3470')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -3078,11 +2605,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => MARINA REBOUÇAS,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Marina Reboucas Martins')->first()->id,
                 'pattern_id' => Pattern::where('name', 'inspiron 7472')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -3111,11 +2637,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => AMANDA NEGRI ,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Amanda Goes Negri')->first()->id,
                 'pattern_id' => Pattern::where('name', 'vostro 5481')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -3144,11 +2669,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => JACQUELINE REIS,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Jacqueline da Costa Reis')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3440')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -3177,11 +2701,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => FERNANDO GALLO,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Fernando Gallo')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3440')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -3216,11 +2739,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => MAICON WILLIAM FERREIRA,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Maicon William')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3440')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -3249,11 +2771,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => LEONARDO RODRIGUES,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Leonardo Rodrigues Mendes de Souza')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3450')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -3282,11 +2803,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => STEFFÂNIA PRATA,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Steffania Prata')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3480')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -3315,11 +2835,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => ADRIANA RODRIGUES,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Adriana Rodrigues')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3480')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -3354,11 +2873,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => ISABELLA MALZONE,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Izabela Malzone')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3450')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -3387,11 +2905,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => GIULIA PERONDI,
                 'holder_id' => null,
                 'pattern_id' => Pattern::where('name', 'latitude 3450')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -3420,11 +2937,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => MARIANE DALL'AGNOL,
                 'holder_id' => null,
                 'pattern_id' => Pattern::where('name', 'inspiron 7460')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -3453,11 +2969,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'apple')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => JULIANA ZIEBELL,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Juliana Ziebell')->first()->id,
                 'pattern_id' => Pattern::where('name', 'macbook pro')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -3473,11 +2988,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => CAROLINA ROSSETTI,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Carolina Rossetti')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3480')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -3506,11 +3020,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => JUSSARA NASCIMENTO,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Jussara Nascimento')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3400')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -3539,11 +3052,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => LAIS ALMEIDA,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Lais Almeida Santos')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3490')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -3572,11 +3084,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => BRENDA KOSCHEL,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Brenda Koschel')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3480')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -3606,11 +3117,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => FERNANDA BONINI,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'FERNANDA FERRAZ BONINI')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3490')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -3639,11 +3149,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => GIOVANNA GREY,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Giovanna Gray')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3450')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -3672,11 +3181,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => ISABELA GAMA,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'ISABELLA SOUZA GAMA')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3480')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -3705,11 +3213,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => GABRIEL CAMILO,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Gabriel Di Pietro de Camillo')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3490')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -3739,11 +3246,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => JOÃO LOPES,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Joao Lopes')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3490')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -3772,11 +3278,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => FERNANDO NAMUR,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Fernando Namur')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3450')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -3806,11 +3311,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => MIRIAM ELWING,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Miriam Elwing')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3450')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -3839,11 +3343,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => LEONARDO HENRIQUE ANDRADE,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Leonardo Henrique de Andrade')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3470')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -3873,11 +3376,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => PAULA ZOPELLO,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Paula Zoppello')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3480')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -3906,11 +3408,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => DEBORA FERREIRA,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Debora Ferreira')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3440')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -3940,11 +3441,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => ADRIANE VILLELA,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Adriana Villela')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3490')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -3973,11 +3473,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => NAYARA OLIVEIRA,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Nayara Oliveira')->first()->id,
                 'pattern_id' => Pattern::where('name', 'xps')->first()->id,
                 'category_id' => Category::where('name', 'desktop')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -4006,11 +3505,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => NAYARA OLIVEIRA,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Nayara Oliveira')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude e5440')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -4039,11 +3537,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => BRUNO CESAR MESQUITA,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Bruno Cezar Mesquita Esteves')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3450')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -4072,11 +3569,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => BEATRIZ YOSHITO,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Beatriz Yoshito')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3440')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -4105,11 +3601,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'apple')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => BEATRIZ YOSHITO,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Beatriz Yoshito')->first()->id,
                 'pattern_id' => Pattern::where('name', 'imac')->first()->id,
                 'category_id' => Category::where('name', 'desktop')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -4124,11 +3619,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => CARLA BONOMI,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Carla Bonomi')->first()->id,
                 'pattern_id' => Pattern::where('name', 'optplex 7010')->first()->id,
                 'category_id' => Category::where('name', 'desktop')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -4157,11 +3651,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => CARLA BONOMI,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Carla Bonomi')->first()->id,
                 'pattern_id' => Pattern::where('name', 'latitude 3440')->first()->id,
                 'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -4190,11 +3683,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => CAROLINA SILVA,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Carolina Silva')->first()->id,
                 'pattern_id' => Pattern::where('name', 'vostro 220s')->first()->id,
                 'category_id' => Category::where('name', 'desktop')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -4223,11 +3715,10 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
-                // 'holder_id' => MIRNA FELIX,
-                'holder_id' => null,
+                'holder_id' => User::where('name', 'Mirna Felix')->first()->id,
                 'pattern_id' => Pattern::where('name', 'vostro 220s')->first()->id,
                 'category_id' => Category::where('name', 'desktop')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -4259,7 +3750,7 @@ class DevicesTableSeeder extends Seeder
                 'holder_id' => null,
                 'pattern_id' => Pattern::where('name', 'xps')->first()->id,
                 'category_id' => Category::where('name', 'desktop')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -4303,7 +3794,7 @@ class DevicesTableSeeder extends Seeder
                 'holder_id' => null,
                 'pattern_id' => Pattern::where('name', 'optplex 3020')->first()->id,
                 'category_id' => Category::where('name', 'desktop')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -4347,7 +3838,7 @@ class DevicesTableSeeder extends Seeder
                 'holder_id' => null,
                 'pattern_id' => Pattern::where('name', 'vostro 200')->first()->id,
                 'category_id' => Category::where('name', 'desktop')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -4391,7 +3882,7 @@ class DevicesTableSeeder extends Seeder
                 'holder_id' => null,
                 'pattern_id' => Pattern::where('name', 'vostro 200')->first()->id,
                 'category_id' => Category::where('name', 'desktop')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -4435,7 +3926,7 @@ class DevicesTableSeeder extends Seeder
                 'holder_id' => null,
                 'pattern_id' => Pattern::where('name', 'optplex 390')->first()->id,
                 'category_id' => Category::where('name', 'desktop')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -4479,7 +3970,7 @@ class DevicesTableSeeder extends Seeder
                 'holder_id' => null,
                 'pattern_id' => Pattern::where('name', 'optplex 7010')->first()->id,
                 'category_id' => Category::where('name', 'desktop')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -4523,7 +4014,7 @@ class DevicesTableSeeder extends Seeder
                 'holder_id' => null,
                 'pattern_id' => Pattern::where('name', 'optplex 9020')->first()->id,
                 'category_id' => Category::where('name', 'desktop')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -4567,7 +4058,7 @@ class DevicesTableSeeder extends Seeder
                 'holder_id' => null,
                 'pattern_id' => Pattern::where('name', 'vostro 220s')->first()->id,
                 'category_id' => Category::where('name', 'desktop')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -4611,7 +4102,7 @@ class DevicesTableSeeder extends Seeder
                 'holder_id' => null,
                 'pattern_id' => Pattern::where('name', 'optplex 3010')->first()->id,
                 'category_id' => Category::where('name', 'desktop')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -4655,7 +4146,7 @@ class DevicesTableSeeder extends Seeder
                 'holder_id' => null,
                 'pattern_id' => Pattern::where('name', 'optplex 390')->first()->id,
                 'category_id' => Category::where('name', 'desktop')->first()->id,
-                'department_id' => 8,
+                'department_id' => 7,
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
@@ -4685,6 +4176,409 @@ class DevicesTableSeeder extends Seeder
                             'id' => Str::random(20),
                             'specification' => 'observação',
                             'description' => 'voluntários'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            // TI
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 't420')->first()->id,
+                'category_id' => Category::where('name', 'servidor')->first()->id,
+                'department_id' => 7,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '001832',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => '8ctby02'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '18189118946'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 't430')->first()->id,
+                'category_id' => Category::where('name', 'servidor')->first()->id,
+                'department_id' => 7,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002211',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => 'g9lq172'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '35409199502'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 't300')->first()->id,
+                'category_id' => Category::where('name', 'servidor')->first()->id,
+                'department_id' => 7,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '001534',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => '1wppph1'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '4154889781'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 't320')->first()->id,
+                'category_id' => Category::where('name', 'servidor')->first()->id,
+                'department_id' => 7,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002123',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => '222hkz1'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '4478676589'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'nx430')->first()->id,
+                'category_id' => Category::where('name', 'servidor')->first()->id,
+                'department_id' => 7,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002447',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => '6zzsmn2'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '15237132446'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'observação',
+                            'description' => 'storage de imagens'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'inspiron 530')->first()->id,
+                'category_id' => Category::where('name', 'desktop')->first()->id,
+                'department_id' => 7,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '000047',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => '2m921g1'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '5699032273'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'inspiron 530')->first()->id,
+                'category_id' => Category::where('name', 'desktop')->first()->id,
+                'department_id' => 7,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '001847',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => '6vtbbj1'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '14984376013'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'observação',
+                            'description' => 'antigo servidor pfsense'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'optplex 390')->first()->id,
+                'category_id' => Category::where('name', 'desktop')->first()->id,
+                'department_id' => 7,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '001690',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => '3xry9r1'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '8572679389'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'observação',
+                            'description' => 'antigo servidor masp wifi'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'optplex 7050')->first()->id,
+                'category_id' => Category::where('name', 'desktop')->first()->id,
+                'department_id' => 7,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002357',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => '6prq0l2'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '14618911862'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'optplex 990')->first()->id,
+                'category_id' => Category::where('name', 'desktop')->first()->id,
+                'department_id' => 7,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002222',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => 'dn2c0r1'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '29692812493'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'optplex 990')->first()->id,
+                'category_id' => Category::where('name', 'desktop')->first()->id,
+                'department_id' => 7,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002220',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => '4czyms1'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '9493125841'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                'holder_id' => null,
+                'pattern_id' => Pattern::where('name', 'inspiron 7560')->first()->id,
+                'category_id' => Category::where('name', 'notebook')->first()->id,
+                'department_id' => 7,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002295',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => 'gw2jsl2'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '36767717750'
                         ],
                     ])
                 ),

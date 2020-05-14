@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Dashboard Routes
 Route::get('/', 'DashboardController@index')->name('dashboard.index')->middleware(['auth', 'department']);
 Route::get('/charts/computers', 'DashboardController@computers')->name('dashboard.computers')->middleware(['auth', 'department']);
 Route::get('/charts/computers-by-brand', 'DashboardController@computersByBrand')->name('dashboard.computers-by-brand')->middleware(['auth', 'department']);
@@ -36,6 +37,11 @@ Route::resource('patterns', 'PatternController')->middleware(['auth', 'departmen
 // Sellers Routes
 Route::resource('sellers', 'SellerController')->middleware(['auth', 'department']);
 
+// Term Routes
+Route::get('term/{device}/delivery', 'TermController@delivery')->name('term.delivery')->middleware(['auth', 'department']);
+Route::get('term/{device}/refund', 'TermController@refund')->name('term.refund')->middleware(['auth', 'department']);
+
+// Auth Routes
 Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('/login/{provider}', 'Auth\SocialLoginController@redirectToProvider')->name('socialite.provider');

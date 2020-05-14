@@ -58,6 +58,27 @@
                 <a :href="`/devices/${device.id}/edit`" class="btn btn-warning"
                     ><i class="far fa-edit"></i
                 ></a>
+                <a
+                    :href="`/term/${device.id}/delivery`"
+                    target="_blank"
+                    class="btn btn-success"
+                    v-if="device.holder != null"
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    title="Termo de entrega"
+                >
+                    <i class="fas fa-file-upload"></i>
+                </a>
+                <button
+                    class="btn btn-danger"
+                    v-if="device.holder != null"
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    title="Termo de devolução"
+                    @click.prevent="emitTerm"
+                >
+                    <i class="fas fa-file-download"></i>
+                </button>
             </div>
         </td>
     </tr>
@@ -93,6 +114,21 @@ export default {
             500,
             { trailing: false }
         ),
+        emitTerm() {
+            swal.fire({
+                title: "Are you sure?",
+                text: "You won't be able to revert this!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Yes, delete it!",
+            }).then((result) => {
+                if (result.value) {
+                    axios.patch(`/devices/${this.device.id}`, { remove: true });
+                }
+            });
+        },
     },
 };
 </script>

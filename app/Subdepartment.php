@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Subdepartment extends Model
 {
+    protected $connection = 'mysql2';
+    protected $table = 'admin.subdepartments';
+
     protected $fillable = ['department_id','name','status'];
 
     /**

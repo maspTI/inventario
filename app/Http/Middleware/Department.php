@@ -25,13 +25,13 @@ class Department
             }
         }
         // Manager
-        if (array_intersect([auth()->user()->department_id], [8]) && count(auth()->user()->roles->all())) {
+        if (array_intersect([auth()->user()->department_id], [7]) && count(auth()->user()->roles->all())) {
             if (array_intersect(auth()->user()->roles->pluck()->all(), [2])) {
                 return $next($request);
             }
         }
         // Regular
-        if (array_intersect([auth()->user()->department_id], [8])) {
+        if (array_intersect([auth()->user()->department_id], [7])) {
             return $next($request);
         }
 

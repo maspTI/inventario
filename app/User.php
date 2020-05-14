@@ -12,6 +12,7 @@ class User extends Authenticatable
     use Notifiable, SoftDeletes;
 
     protected $connection = 'mysql2';
+    protected $table = 'admin.users';
 
     protected $fillable = [
         'department_id', 'subdepartment_id','name','email','avatar','username','status',

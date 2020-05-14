@@ -78,6 +78,9 @@ class Device extends Model
                     $query->where('name', 'LIKE', "%{$filters['search']}%")
                         ->orWhere('cnpj', 'LIKE', "%{$filters['search']}%");
                 })
+                ->orWhereHas('holder', function ($query) use ($filters) {
+                    $query->where('name', 'LIKE', "%{$filters['search']}%");
+                })
                 ->orWhere('property_tag', "LIKE", "%{$filters['search']}%")
                 ->orWhereJsonContains('specifications', ['description' => strtolower($filters['search'])])
                 ->orWhereJsonContains('specifications', ['specification' => strtolower($filters['search'])]);
