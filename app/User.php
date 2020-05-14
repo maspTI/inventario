@@ -43,6 +43,18 @@ class User extends Authenticatable
         return $this->hasMany(Device::class, 'holder_id');
     }
 
+    /**
+     * @param integer Department's id
+     * @return App\User
+     */
+    public function manager($departmentId)
+    {
+        return $this->where('department_id', $departmentId)
+            ->whereHas('roles', function ($query) {
+                $query->whereId(2);
+            })->first();
+    }
+
     public function search(array $filters = null)
     {
         if ($filters) {

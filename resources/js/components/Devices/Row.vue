@@ -116,16 +116,27 @@ export default {
         ),
         emitTerm() {
             swal.fire({
-                title: "Are you sure?",
-                text: "You won't be able to revert this!",
+                title: "Receber o equipamento?",
+                text: `Você desvinculará o equipamento do usuário ${this.device.holder.name}`,
                 icon: "warning",
                 showCancelButton: true,
                 confirmButtonColor: "#3085d6",
                 cancelButtonColor: "#d33",
-                confirmButtonText: "Yes, delete it!",
+                confirmButtonText: "Ok",
+                cancelButtonText: "Cancelar",
             }).then((result) => {
                 if (result.value) {
-                    axios.patch(`/devices/${this.device.id}`, { remove: true });
+                    axios
+                        .patch(`/devices/${this.device.id}`, { refund: true })
+                        .then((result) => {
+                            this.device.holder = null;
+                            window.open(result.data.url);
+                            window.flash("Equipamento entregue com sucesso.");
+                        })
+                        .catch((errors) => {
+                            console.error(errors);
+                            window.flash("Algo deu errado.", "danger");
+                        });
                 }
             });
         },

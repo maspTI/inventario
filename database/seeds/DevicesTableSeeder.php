@@ -582,6 +582,134 @@ class DevicesTableSeeder extends Seeder
             [
                 'brand_id' => Brand::where('name', 'dell')->first()->id,
                 'seller_id' => null,
+                'holder_id' => User::where('name', 'Gisele Pedroso Do Nascimento')->first()->id,
+                'pattern_id' => Pattern::where('name', 'latitude 3440')->first()->id,
+                'category_id' => Category::where('name', 'notebook')->first()->id,
+                'department_id' => 7,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002015',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => '4jdg342'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '9878572226'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                'holder_id' => User::where('name', 'Bruno Ferreira Silva')->first()->id,
+                'pattern_id' => Pattern::where('name', 'latitude 3440')->first()->id,
+                'category_id' => Category::where('name', 'notebook')->first()->id,
+                'department_id' => 7,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002001',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => 'dgdg342'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '29288214722'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                'holder_id' => User::where('name', 'William Ferreira da Silva')->first()->id,
+                'pattern_id' => Pattern::where('name', 'latitude 3440')->first()->id,
+                'category_id' => Category::where('name', 'notebook')->first()->id,
+                'department_id' => 7,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002000',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => 'jhdg342'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '42409374914'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
+                'holder_id' => User::where('name', 'Igor Ferreira Lutero da Silva')->first()->id,
+                'pattern_id' => Pattern::where('name', 'inspiron 7560')->first()->id,
+                'category_id' => Category::where('name', 'notebook')->first()->id,
+                'department_id' => 7,
+                'subdepartment_id' => 7,
+                'ticket_number' => null,
+                'bought_at' => null,
+                'property_tag' => '002295',
+                'serial_number' => null,
+                'specifications' => strtolower(
+                    json_encode([
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Service TAG',
+                            'description' => 'gw2jsl2'
+                        ],
+
+                        [
+                            'id' => Str::random(20),
+                            'specification' => 'Express TAG',
+                            'description' => '36767717750'
+                        ],
+                    ])
+                ),
+                'status' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+            [
+                'brand_id' => Brand::where('name', 'dell')->first()->id,
+                'seller_id' => null,
                 'holder_id' => null,
                 'pattern_id' => Pattern::where('name', 'inspiron 3268')->first()->id,
                 'category_id' => Category::where('name', 'desktop')->first()->id,
@@ -1901,38 +2029,6 @@ class DevicesTableSeeder extends Seeder
                             'id' => Str::random(20),
                             'specification' => 'Express TAG',
                             'description' => '25517314730'
-                        ],
-                    ])
-                ),
-                'status' => Carbon::now(),
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now()
-            ],
-
-            [
-                'brand_id' => Brand::where('name', 'dell')->first()->id,
-                'seller_id' => null,
-                'holder_id' => User::where('name', 'Ana Carolina Pais Pellegrini')->first()->id,
-                'pattern_id' => Pattern::where('name', 'latitude 3440')->first()->id,
-                'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 7,
-                'subdepartment_id' => 7,
-                'ticket_number' => null,
-                'bought_at' => null,
-                'property_tag' => '002015',
-                'serial_number' => null,
-                'specifications' => strtolower(
-                    json_encode([
-                        [
-                            'id' => Str::random(20),
-                            'specification' => 'Service TAG',
-                            'description' => '4JDG342'
-                        ],
-
-                        [
-                            'id' => Str::random(20),
-                            'specification' => 'Express TAG',
-                            'description' => '9878572226'
                         ],
                     ])
                 ),
@@ -4547,38 +4643,6 @@ class DevicesTableSeeder extends Seeder
                             'id' => Str::random(20),
                             'specification' => 'Express TAG',
                             'description' => '9493125841'
-                        ],
-                    ])
-                ),
-                'status' => Carbon::now(),
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now()
-            ],
-
-            [
-                'brand_id' => Brand::where('name', 'dell')->first()->id,
-                'seller_id' => null,
-                'holder_id' => null,
-                'pattern_id' => Pattern::where('name', 'inspiron 7560')->first()->id,
-                'category_id' => Category::where('name', 'notebook')->first()->id,
-                'department_id' => 7,
-                'subdepartment_id' => 7,
-                'ticket_number' => null,
-                'bought_at' => null,
-                'property_tag' => '002295',
-                'serial_number' => null,
-                'specifications' => strtolower(
-                    json_encode([
-                        [
-                            'id' => Str::random(20),
-                            'specification' => 'Service TAG',
-                            'description' => 'gw2jsl2'
-                        ],
-
-                        [
-                            'id' => Str::random(20),
-                            'specification' => 'Express TAG',
-                            'description' => '36767717750'
                         ],
                     ])
                 ),

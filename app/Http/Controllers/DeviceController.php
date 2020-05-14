@@ -125,6 +125,18 @@ class DeviceController extends Controller
             return $device->changeStatus()->fresh();
         }
 
+        if (request()->has('refund')) {
+            $user = $device->holder;
+            $device->update([
+                'holder_id' => null
+            ]);
+
+            return collect([
+                'url' => route('term.refund', $device) . "?user=" . encrypt($user->id),
+                'device' => $device->fresh()->with('holder')
+            ]);
+        }
+
         $this->requestValidate($request, $device);
 
         return $device->update([

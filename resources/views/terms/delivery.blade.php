@@ -65,7 +65,7 @@
                         </tr>
                         <tr>
                             <th>Patrimônio</th>
-                            <td>{{ $device->property_tag }}</td>
+                            <td>{{ $device->property_tag ?? '' }}</td>
                         </tr>
                     </tbody>
                 </table>
