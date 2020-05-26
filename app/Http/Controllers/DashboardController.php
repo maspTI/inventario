@@ -24,7 +24,7 @@ class DashboardController extends Controller
         $categories = Category::whereIn('id', [1, 2, 3])->orderBy('name')->get();
 
         return array_map(function ($category) {
-            return [$category->name => $category->countDevices()];
+            return [ucfirst($category->name) => $category->countDevices()];
         }, $categories->all());
     }
 
@@ -37,7 +37,7 @@ class DashboardController extends Controller
         $patterns = $patterns->computerPatterns();
 
         return $patterns->map(function ($pattern) {
-            return [$pattern->name => $pattern->countDevices()];
+            return [ucfirst($pattern->name) => $pattern->countDevices()];
         });
     }
 
@@ -50,7 +50,7 @@ class DashboardController extends Controller
         $brands = $brands->computerBrands();
 
         return $brands->map(function ($brand) {
-            return [$brand->name => $brand->countDevices()];
+            return [ucfirst($brand->name) => $brand->countDevices()];
         });
     }
 }
