@@ -64,3 +64,9 @@ body {
 .form-check .form-check-input:checked + .form-check-sign .check {
     background: $masp;
 }
+
+.ps-container {
+    touch-action: auto;
+    overflow: auto !important;
+    -ms-overflow-style: none;
+}
