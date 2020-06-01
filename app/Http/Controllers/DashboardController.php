@@ -21,7 +21,7 @@ class DashboardController extends Controller
      */
     public function computers()
     {
-        $categories = Category::whereIn('id', [1, 2, 3])->orderBy('name')->get();
+        $categories = Category::orderBy('name')->get();
 
         return array_map(function ($category) {
             return [ucfirst($category->name) => $category->countDevices()];

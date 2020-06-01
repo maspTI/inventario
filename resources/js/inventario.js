@@ -86,6 +86,10 @@ Vue.component(
 // Utilities
 Vue.component("flash", require("./components/Utilities/Flash.vue").default);
 Vue.component(
+    "chart-bar",
+    require("./components/Utilities/ChartBar.vue").default
+);
+Vue.component(
     "chart-pie",
     require("./components/Utilities/ChartPie.vue").default
 );
