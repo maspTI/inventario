@@ -18,7 +18,7 @@
                 <chart-bar
                     id="{{ Str::random(20) }}"
                     url="/charts/computers"
-                    title="Tipos de Computadores"
+                    title="Quantidade por Tipo de Equipamento"
                 ></chart-bar>
             </div>
             <div class="col-md-6">

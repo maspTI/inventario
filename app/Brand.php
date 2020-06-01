@@ -25,6 +25,7 @@ class Brand extends Model
     {
         return $this->devices()
             ->where('department_id', auth()->user()->department_id)
+            ->whereIn('category_id', [1,2])
             ->count('id');
     }
 
