@@ -3300,52 +3300,6 @@ class CellPhonesSeeder extends Seeder
                 'subdepartment_id' => 7,
                 'ticket_number' => null,
                 'bought_at' => null,
-                'property_tag' => 'RQ8M803L78L',
-                'serial_number' => 'RQ8M803L78L',
-                'specifications' => strtolower(
-                    json_encode([
-                        [
-                            'id' => Str::random(20),
-                            'specification' => 'numero',
-                            'description' => '11997246703',
-                        ],
-                        [
-                            'id' => Str::random(20),
-                            'specification' => 'discagem_rapida',
-                            'description' => '3016',
-                        ],
-                        [
-                            'id' => Str::random(20),
-                            'specification' => 'imei_1',
-                            'description' => '357289109526069',
-                        ],
-                        [
-                            'id' => Str::random(20),
-                            'specification' => 'imei_2',
-                            'description' => '357290109526067',
-                        ],
-                        [
-                            'id' => Str::random(20),
-                            'specification' => 'observacao',
-                            'description' => 'reserva',
-                        ]
-                    ])
-                ),
-                'status' => Carbon::now(),
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now(),
-            ],
-
-            [
-                'brand_id' => 4,
-                'seller_id' => null,
-                'holder_id' => null,
-                'pattern_id' => 61,
-                'category_id' => 7,
-                'department_id' => 7,
-                'subdepartment_id' => 7,
-                'ticket_number' => null,
-                'bought_at' => null,
                 'property_tag' => 'RQ8M803RXFX',
                 'serial_number' => 'RQ8M803RXFX',
                 'specifications' => strtolower(
