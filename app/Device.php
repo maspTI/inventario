@@ -11,7 +11,7 @@ class Device extends Model
     use SoftDeletes;
 
     protected $fillable = [
-        'brand_id','seller_id','holder_id','pattern_id','category_id','department_id', 'subdepartment_id','ticket_number','bought_at','property_tag','specifications','status'
+        'brand_id','seller_id','holder_id','pattern_id','category_id','department_id', 'subdepartment_id','ticket_number','bought_at','property_tag','specifications','status','serial_number'
     ];
 
     protected $casts = ['specifications' => 'array'];
