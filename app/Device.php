@@ -65,11 +65,21 @@ class Device extends Model
                 }
             })
             ->where(function ($query) use ($filters) {
+                if ($filters['status'] == 1) {
+                    return $query->whereNotNull('status');
+                }
+                if ($filters['status'] == 2) {
+                    return $query->whereNull('status');
+                }
+                return;
+            })
+            ->where(function ($query) use ($filters) {
                 $query->whereHas('brand', function ($query) use ($filters) {
                     $query->where('name', 'LIKE', "%{$filters['search']}%");
                 })
                 ->orWhereHas('category', function ($query) use ($filters) {
-                    $query->where('name', 'LIKE', "%{$filters['search']}%");
+                    $query->where('name', 'LIKE', "%{$filters['search']}%")
+                        ->orderBy('name');
                 })
                 ->orWhereHas('pattern', function ($query) use ($filters) {
                     $query->where('name', 'LIKE', "%{$filters['search']}%");
@@ -79,9 +89,11 @@ class Device extends Model
                         ->orWhere('cnpj', 'LIKE', "%{$filters['search']}%");
                 })
                 ->orWhereHas('holder', function ($query) use ($filters) {
-                    $query->where('name', 'LIKE', "%{$filters['search']}%");
+                    $query->where('name', 'LIKE', "%{$filters['search']}%")
+                        ->orderBy('name');
                 })
                 ->orWhere('property_tag', "LIKE", "%{$filters['search']}%")
+                ->orWhere('serial_number', "LIKE", "%{$filters['search']}%")
                 ->orWhereJsonContains('specifications', ['description' => strtolower($filters['search'])])
                 ->orWhereJsonContains('specifications', ['specification' => strtolower($filters['search'])]);
             })

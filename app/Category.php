@@ -27,6 +27,7 @@ class Category extends Model
     public function countDevices()
     {
         return $this->devices()
+            ->whereNotNull('status')
             ->where('department_id', auth()->user()->department_id)
             ->count('id');
     }
