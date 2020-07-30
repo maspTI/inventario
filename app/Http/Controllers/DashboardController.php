@@ -21,7 +21,7 @@ class DashboardController extends Controller
      */
     public function computers()
     {
-        $categories = Category::orderBy('name')->get();
+        $categories = Category::whereHas('devices')->orderBy('name')->get();
 
         return array_map(function ($category) {
             return [ucfirst($category->name) => $category->countDevices()];
@@ -52,5 +52,17 @@ class DashboardController extends Controller
         return $brands->map(function ($brand) {
             return [ucfirst($brand->name) => $brand->countDevices()];
         });
+    }
+
+    /**
+     *
+     */
+    public function reservation()
+    {
+        $categories = Category::whereHas('devices')->orderBy('name')->get();
+
+        return array_map(function ($category) {
+            return [ucfirst($category->name) => $category->countReservationDevices()];
+        }, $categories->all());
     }
 }

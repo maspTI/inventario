@@ -31,4 +31,16 @@ class Category extends Model
             ->where('department_id', auth()->user()->department_id)
             ->count('id');
     }
+
+    /**
+     *
+     */
+    public function countReservationDevices()
+    {
+        return $this->devices()
+            ->whereNotNull('status')
+            ->whereJsonContains('specifications', ['description' => 'reserva'])
+            ->where('department_id', auth()->user()->department_id)
+            ->count('id');
+    }
 }
