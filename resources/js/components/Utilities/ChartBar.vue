@@ -66,6 +66,9 @@ export default {
                         display: true,
                         text: this.title,
                     },
+                    legend: {
+                        display: false,
+                    },
                 },
             });
         },

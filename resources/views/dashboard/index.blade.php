@@ -24,19 +24,20 @@
                 ></chart-pie>
             </div>
             <div class="col-md-6 mt-3">
+                <chart-pie
+                    id="{{ Str::random(20) }}"
+                    url="/charts/patterns"
+                    title="Modelos de Computadores"
+                    legend_position="right"
+                ></chart-pie>
+            </div>
+            <div class="col-md-6 mt-3">
                 <chart-bar
                     id="{{ Str::random(20) }}"
                     url="/charts/computers/reservation"
                     title="Quantidade por Tipo de Equipamento em Reserva"
                 ></chart-bar>
             </div>
-            {{-- <div class="col-md-12 mt-2">
-                <chart-pie
-                    id="{{ Str::random(20) }}"
-                    url="/charts/patterns"
-                    title="Modelos de Computadores"
-                ></chart-pie>
-            </div> --}}
         </div>
     </div>
 </div>
