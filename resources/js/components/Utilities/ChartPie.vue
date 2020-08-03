@@ -3,7 +3,7 @@
 </template>
 <script>
 export default {
-    props: ["id", "url", "title", "legend_position"],
+    props: ["id", "url", "title", "legend_position", "show_legend"],
     data() {
         return {
             colors: {
@@ -66,7 +66,7 @@ export default {
                         text: this.title,
                     },
                     legend: {
-                        display: true,
+                        display: this.show_legend === "false" ? false : true,
                         position: this.legend_position
                             ? this.legend_position
                             : "top",

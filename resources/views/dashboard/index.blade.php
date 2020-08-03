@@ -28,7 +28,7 @@
                     id="{{ Str::random(20) }}"
                     url="/charts/patterns"
                     title="Modelos de Computadores"
-                    legend_position="right"
+                    show_legend="false"
                 ></chart-pie>
             </div>
             <div class="col-md-6 mt-3">
