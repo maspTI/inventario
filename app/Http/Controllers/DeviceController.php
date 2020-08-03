@@ -10,6 +10,7 @@ use App\Pattern;
 use App\Category;
 use Carbon\Carbon;
 use Illuminate\View\View;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Validation\Rule;
@@ -127,13 +128,20 @@ class DeviceController extends Controller
 
         if (request()->has('refund')) {
             $user = $device->holder;
+            $specifications = $device->specifications;
+            array_push($specifications, [
+                'id' => Str::random(20),
+                'specification' => 'observacao',
+                'description' => 'reserva'
+            ]);
             $device->update([
-                'holder_id' => null
+                'holder_id' => null,
+                'specifications' => $specifications,
             ]);
 
             return collect([
                 'url' => route('term.refund', $device) . "?user=" . encrypt($user->id),
-                'device' => $device->fresh()->with('holder')
+                'device' => $device->fresh()
             ]);
         }
 
