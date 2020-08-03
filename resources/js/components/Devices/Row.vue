@@ -129,7 +129,6 @@ export default {
                     axios
                         .patch(`/devices/${this.device.id}`, { refund: true })
                         .then((result) => {
-                            console.log(result);
                             this.device.holder = null;
                             this.device.specifications =
                                 result.data.device.specifications;
